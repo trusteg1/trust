@@ -3,869 +3,2209 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مركز تراست | صيانة الأجهزة الكهربائية - الإسكندرية</title>
-<meta name="description" content="مركز تراست لصيانة الأجهزة الكهربائية في الإسكندرية - ثلاجات، غسالات، بوتاجازات، مكيفات. خدمة سريعة وضمان على الصيانة.">
-<link rel="icon" href="https://i.postimg.cc/vHbYGnf2/logo.jpg">
+<title>TRUST مركز تراست | صيانة الأجهزة المنزلية في الإسكندرية</title>
+<meta name="description" content="مركز تراست لصيانة الأجهزة المنزلية في الإسكندرية - غسالات، ثلاجات، تكييفات، بوتاجازات، سخانات. فنيون متخصصون وضمان على أعمال الصيانة.">
+<meta name="keywords" content="صيانة أجهزة منزلية, الإسكندرية, غسالات, ثلاجات, تكييفات, مركز تراست">
+<meta property="og:title" content="TRUST مركز تراست | صيانة الأجهزة المنزلية">
+<meta property="og:description" content="قبل ما تحتار... كلم تراست وخد القرار">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 <style>
-/* ================= إعدادات عامة ================= */
-*{margin:0;padding:0;box-sizing:border-box}
+/* ==================== VARIABLES ==================== */
 :root{
-  --blue:#0d3b66;
-  --blue-2:#14548f;
-  --blue-light:#1e7fd4;
-  --accent:#ff9500;
-  --accent-dark:#e07f00;
-  --bg:#f4f8fc;
+  --navy:#0a1428;
+  --navy-2:#0f1e3d;
+  --navy-3:#16294d;
+  --red:#b71c2b;
+  --red-dark:#8b1420;
+  --red-bright:#d92030;
+  --gold:#f0b400;
+  --gold-2:#ffc93c;
   --white:#ffffff;
-  --text:#1b2a3a;
-  --muted:#6b7c93;
-  --border:#e2ebf4;
-  --radius:16px;
-  --shadow:0 10px 30px rgba(13,59,102,.08);
-  --shadow-lg:0 20px 50px rgba(13,59,102,.15);
+  --gray:#a8b4c8;
+  --gray-2:#6b7a94;
+  --wa:#25D366;
+  --radius:14px;
+  --shadow:0 20px 60px rgba(0,0,0,.45);
+  --glow-red:0 0 30px rgba(183,28,43,.5);
+  --glow-gold:0 0 30px rgba(240,180,0,.45);
 }
-html{scroll-behavior:smooth}
+
+/* ==================== RESET ==================== */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{
-  font-family:'Cairo',system-ui,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.9;
+  font-family:'Cairo',sans-serif;
+  background:var(--navy);
+  color:var(--white);
   overflow-x:hidden;
+  line-height:1.7;
 }
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
-.container{width:min(1180px,92%);margin-inline:auto}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+input,select,textarea{font-family:inherit}
 
-/* ================= الهيدر ================= */
-.site-header{
-  position:sticky;top:0;z-index:1000;
-  background:rgba(255,255,255,.95);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--border);
-  box-shadow:0 2px 20px rgba(13,59,102,.05);
+/* ==================== UTILITIES ==================== */
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.section{padding:100px 0;position:relative}
+.section-title{
+  font-size:clamp(1.8rem,4vw,2.8rem);
+  font-weight:900;
+  text-align:center;
+  margin-bottom:14px;
+  line-height:1.3;
 }
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{
-  width:58px;height:58px;object-fit:contain;border-radius:14px;
-  background:#fff;padding:4px;box-shadow:var(--shadow);
+.section-title .accent{color:var(--gold)}
+.section-sub{
+  text-align:center;
+  color:var(--gray);
+  font-size:1.05rem;
+  max-width:680px;
+  margin:0 auto 55px;
 }
-.brand-text strong{display:block;font-size:20px;font-weight:900;color:var(--blue);line-height:1.4}
-.brand-text span{display:block;font-size:12.5px;color:var(--muted);font-weight:600}
+.divider{
+  width:80px;height:4px;
+  background:linear-gradient(90deg,var(--red),var(--gold));
+  margin:0 auto 22px;
+  border-radius:2px;
+}
 
+/* ==================== BUTTONS ==================== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 32px;
+  border-radius:50px;
+  font-weight:700;
+  font-size:1rem;
+  transition:all .3s cubic-bezier(.4,0,.2,1);
+  cursor:pointer;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--red),var(--red-bright));
+  color:var(--white);
+  box-shadow:0 8px 24px rgba(183,28,43,.35);
+}
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 34px rgba(183,28,43,.55);
+}
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold),var(--gold-2));
+  color:var(--navy);
+  box-shadow:0 8px 24px rgba(240,180,0,.3);
+  font-weight:800;
+}
+.btn-gold:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 34px rgba(240,180,0,.5);
+}
+.btn-wa{
+  background:linear-gradient(135deg,#1eb254,var(--wa));
+  color:var(--white);
+  box-shadow:0 8px 24px rgba(37,211,102,.3);
+}
+.btn-wa:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 34px rgba(37,211,102,.5);
+}
+.btn-outline{
+  background:transparent;
+  border:2px solid rgba(255,255,255,.25);
+  color:var(--white);
+}
+.btn-outline:hover{
+  border-color:var(--gold);
+  color:var(--gold);
+  transform:translateY(-3px);
+}
+.btn svg{width:20px;height:20px;flex-shrink:0}
+
+/* ==================== HEADER ==================== */
+.header{
+  position:fixed;top:0;left:0;right:0;
+  z-index:1000;
+  background:rgba(10,20,40,.72);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  transition:all .3s;
+}
+.header.scrolled{
+  background:rgba(10,20,40,.96);
+  box-shadow:0 4px 30px rgba(0,0,0,.4);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 24px;
+  max-width:1400px;margin:0 auto;
+  gap:20px;
+}
+
+/* LOGO */
+.logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.logo-mark{
+  width:44px;height:44px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-trust{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;
+  font-size:1.6rem;
+  letter-spacing:1px;
+  display:flex;
+}
+.logo-trust .t{color:var(--red-bright)}
+.logo-trust .r{color:var(--red-bright)}
+.logo-trust .u{color:var(--gold);font-style:italic}
+.logo-trust .s{color:var(--red-bright)}
+.logo-trust .t2{color:var(--red-bright)}
+.logo-sub{
+  font-size:.6rem;
+  color:var(--gray);
+  font-weight:600;
+  letter-spacing:2px;
+  margin-top:2px;
+}
+
+/* NAV */
 .nav{display:flex;align-items:center;gap:6px}
 .nav a{
-  padding:9px 15px;border-radius:10px;font-weight:700;font-size:15px;color:var(--blue);
-  transition:.25s;
-}
-.nav a:hover{background:#eaf3fc;color:var(--blue-light)}
-.nav a.cta{
-  background:linear-gradient(135deg,var(--blue-light),var(--blue-2));
-  color:#fff;box-shadow:0 6px 18px rgba(30,127,212,.35);
-}
-.nav a.cta:hover{transform:translateY(-2px);color:#fff}
-
-.menu-btn{
-  display:none;background:none;border:2px solid var(--border);border-radius:10px;
-  font-size:22px;padding:4px 12px;color:var(--blue);cursor:pointer;
-}
-
-/* ================= الهيرو ================= */
-.hero{
+  padding:9px 15px;
+  font-size:.92rem;
+  font-weight:600;
+  color:var(--gray);
+  border-radius:8px;
+  transition:all .25s;
   position:relative;
-  background:
-    radial-gradient(circle at 85% 15%, rgba(255,149,0,.22), transparent 45%),
-    radial-gradient(circle at 10% 90%, rgba(30,127,212,.35), transparent 50%),
-    linear-gradient(135deg,#0a2d4d 0%,#0d3b66 45%,#14548f 100%);
-  color:#fff;
-  padding:70px 0 90px;
-  overflow:hidden;
 }
-.hero::after{
-  content:"";position:absolute;inset:0;
-  background-image:radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px);
-  background-size:26px 26px;opacity:.7;pointer-events:none;
+.nav a:hover,.nav a.active{color:var(--white)}
+.nav a::after{
+  content:'';position:absolute;bottom:3px;right:15px;left:15px;
+  height:2px;background:var(--gold);
+  transform:scaleX(0);transition:transform .3s;
+  border-radius:2px;
 }
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
-  padding:7px 16px;border-radius:50px;font-size:14px;font-weight:700;margin-bottom:18px;
-}
-.hero h1{font-size:clamp(28px,4.4vw,46px);font-weight:900;line-height:1.45;margin-bottom:16px}
-.hero h1 span{color:var(--accent)}
-.hero p{font-size:17px;color:#d6e6f7;max-width:600px;margin-bottom:28px}
-.hero-btns{display:flex;flex-wrap:wrap;gap:14px}
-.btn{
-  display:inline-flex;align-items:center;gap:9px;
-  padding:14px 28px;border-radius:12px;font-weight:800;font-size:16px;
-  border:none;cursor:pointer;transition:.25s;font-family:inherit;
-}
-.btn-primary{background:linear-gradient(135deg,var(--accent),#ffb547);color:#3a2200;box-shadow:0 12px 28px rgba(255,149,0,.35)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(255,149,0,.45)}
-.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.35)}
-.btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-3px)}
-.btn-wa{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;box-shadow:0 12px 28px rgba(37,211,102,.35)}
-.btn-wa:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(37,211,102,.45)}
+.nav a:hover::after{transform:scaleX(1)}
 
+/* HEADER CONTACT */
+.header-contact{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.header-phone{
+  display:flex;align-items:center;gap:6px;
+  padding:8px 14px;
+  background:rgba(183,28,43,.15);
+  border:1px solid rgba(183,28,43,.4);
+  border-radius:50px;
+  font-size:.85rem;
+  font-weight:700;
+  color:var(--white);
+  transition:all .3s;
+  direction:ltr;
+}
+.header-phone:hover{
+  background:rgba(183,28,43,.3);
+  box-shadow:var(--glow-red);
+}
+.header-phone svg{width:15px;height:15px;color:var(--gold)}
+.header-wa{
+  width:40px;height:40px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#1eb254,var(--wa));
+  border-radius:50%;
+  transition:all .3s;
+}
+.header-wa:hover{transform:scale(1.1);box-shadow:0 0 20px rgba(37,211,102,.6)}
+.header-wa svg{width:20px;height:20px;color:#fff}
+.btn-header-order{
+  padding:10px 22px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-2));
+  color:var(--navy);
+  border-radius:50px;
+  font-weight:800;
+  font-size:.9rem;
+  transition:all .3s;
+}
+.btn-header-order:hover{transform:translateY(-2px);box-shadow:var(--glow-gold)}
+
+/* BURGER */
+.burger{
+  display:none;
+  width:44px;height:44px;
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  background:rgba(255,255,255,.06);
+  border-radius:10px;
+}
+.burger span{
+  width:22px;height:2px;background:var(--white);
+  border-radius:2px;transition:all .3s;
+}
+.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+/* MOBILE MENU */
+.mobile-menu{
+  position:fixed;top:0;left:0;right:0;bottom:0;
+  background:rgba(10,20,40,.98);
+  backdrop-filter:blur(20px);
+  z-index:999;
+  padding:100px 30px 40px;
+  display:flex;flex-direction:column;gap:8px;
+  transform:translateX(100%);
+  transition:transform .4s cubic-bezier(.4,0,.2,1);
+  overflow-y:auto;
+}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu a{
+  padding:18px 20px;
+  font-size:1.15rem;
+  font-weight:700;
+  color:var(--white);
+  border-radius:12px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.06);
+  transition:all .3s;
+}
+.mobile-menu a:hover{background:rgba(183,28,43,.2);border-color:var(--red)}
+.mobile-menu .mm-divider{height:1px;background:rgba(255,255,255,.08);margin:14px 0}
+.mobile-menu .mm-phone{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px;
+  background:rgba(183,28,43,.15);
+  border:1px solid rgba(183,28,43,.4);
+  border-radius:12px;
+  font-size:1.1rem;font-weight:800;
+  direction:ltr;
+}
+.mobile-menu .mm-wa{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:16px;
+  background:linear-gradient(135deg,#1eb254,var(--wa));
+  border-radius:12px;
+  font-size:1.05rem;font-weight:800;
+}
+
+/* ==================== HERO ==================== */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  position:relative;
+  padding:140px 0 80px;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 20% 20%,rgba(183,28,43,.18),transparent 55%),
+    radial-gradient(ellipse at 80% 80%,rgba(240,180,0,.1),transparent 55%),
+    linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 50%,var(--navy) 100%);
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:60px;
+  align-items:center;
+  position:relative;z-index:2;
+}
+.hero-content{text-align:right}
+
+/* HERO BRAND */
+.hero-brand{
+  display:flex;align-items:center;gap:20px;
+  margin-bottom:24px;
+  opacity:0;animation:fadeUp .8s .1s forwards;
+}
+.hero-logo-mark{
+  width:70px;height:70px;
+  flex-shrink:0;
+  filter:drop-shadow(0 0 20px rgba(240,180,0,.35));
+}
+.hero-trust{
+  font-family:'Montserrat',sans-serif;
+  font-weight:900;
+  font-size:clamp(3.5rem,9vw,6.5rem);
+  line-height:.95;
+  letter-spacing:2px;
+  display:flex;
+  text-shadow:0 8px 40px rgba(0,0,0,.5);
+}
+.hero-trust .t{color:var(--red-bright);text-shadow:0 0 40px rgba(217,32,48,.5)}
+.hero-trust .r{color:var(--red-bright);text-shadow:0 0 40px rgba(217,32,48,.5)}
+.hero-trust .u{
+  color:var(--gold);
+  font-style:italic;
+  text-shadow:0 0 45px rgba(240,180,0,.6);
+  position:relative;
+}
+.hero-trust .s{color:var(--red-bright);text-shadow:0 0 40px rgba(217,32,48,.5)}
+.hero-trust .t2{color:var(--red-bright);text-shadow:0 0 40px rgba(217,32,48,.5)}
+
+.hero-tagline{
+  font-size:clamp(1.3rem,3vw,1.9rem);
+  font-weight:800;
+  color:var(--white);
+  margin-bottom:8px;
+  opacity:0;animation:fadeUp .8s .25s forwards;
+}
+.hero-tagline .gold{color:var(--gold)}
+.hero-service-line{
+  font-size:clamp(1rem,2.2vw,1.3rem);
+  color:var(--gray);
+  font-weight:600;
+  margin-bottom:32px;
+  opacity:0;animation:fadeUp .8s .35s forwards;
+}
+.hero-slogan{
+  display:inline-block;
+  padding:12px 26px;
+  background:linear-gradient(135deg,rgba(183,28,43,.2),rgba(240,180,0,.08));
+  border:1px solid rgba(240,180,0,.3);
+  border-radius:50px;
+  font-size:clamp(.95rem,2vw,1.15rem);
+  font-weight:700;
+  color:var(--gold-2);
+  margin-bottom:36px;
+  opacity:0;animation:fadeUp .8s .45s forwards;
+  position:relative;
+}
+.hero-slogan::before{
+  content:'“';
+  font-size:1.6rem;
+  color:var(--red-bright);
+  margin-left:4px;
+}
+.hero-slogan::after{
+  content:'”';
+  font-size:1.6rem;
+  color:var(--red-bright);
+  margin-right:4px;
+}
+.hero-buttons{
+  display:flex;gap:16px;flex-wrap:wrap;
+  opacity:0;animation:fadeUp .8s .55s forwards;
+}
+.hero-buttons .btn{flex:1;min-width:200px}
+
+/* HERO VISUAL */
+.hero-visual{
+  position:relative;
+  opacity:0;animation:fadeIn 1.1s .5s forwards;
+}
+.hero-visual-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
 .hero-card{
-  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
-  border-radius:26px;padding:30px;backdrop-filter:blur(8px);text-align:center;
+  border-radius:18px;
+  overflow:hidden;
+  position:relative;
+  aspect-ratio:1;
+  background:var(--navy-3);
+  border:1px solid rgba(255,255,255,.08);
+  transition:all .5s;
+}
+.hero-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(240,180,0,.4);
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
 }
 .hero-card img{
-  width:190px;height:190px;object-fit:contain;margin:0 auto 18px;
-  background:#fff;border-radius:24px;padding:14px;box-shadow:var(--shadow-lg);
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s;
 }
-.hero-card h3{font-size:20px;font-weight:900;margin-bottom:6px}
-.hero-card p{font-size:14px;color:#cfe2f5;margin:0}
-.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
-.hero-stats div{background:rgba(255,255,255,.12);border-radius:12px;padding:10px 6px}
-.hero-stats b{display:block;font-size:20px;color:var(--accent);font-weight:900}
-.hero-stats small{font-size:11.5px;color:#d6e6f7}
+.hero-card:hover img{transform:scale(1.08)}
+.hero-card-label{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:14px;
+  background:linear-gradient(to top,rgba(10,20,40,.95),transparent);
+  font-weight:700;
+  font-size:.9rem;
+  display:flex;align-items:center;gap:8px;
+}
+.hero-card-label .dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 10px var(--gold);
+}
+.hero-card.tall{grid-row:span 2}
+.hero-card.wide{grid-column:span 2;aspect-ratio:2/1}
 
-/* ================= الأقسام ================= */
-section{padding:80px 0}
-.section-head{text-align:center;max-width:720px;margin:0 auto 50px}
-.section-tag{
-  display:inline-block;background:#e7f2fd;color:var(--blue-light);
-  font-weight:800;font-size:13.5px;padding:6px 18px;border-radius:50px;margin-bottom:14px;
+/* FLOATING BADGE */
+.hero-badge{
+  position:absolute;
+  top:-16px;left:-16px;
+  padding:12px 20px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-2));
+  color:var(--navy);
+  border-radius:14px;
+  font-weight:900;
+  font-size:.85rem;
+  box-shadow:0 12px 30px rgba(240,180,0,.4);
+  z-index:3;
+  animation:float 3s ease-in-out infinite;
 }
-.section-head h2{font-size:clamp(24px,3.2vw,36px);font-weight:900;color:var(--blue);margin-bottom:12px}
-.section-head p{color:var(--muted);font-size:16px}
+.hero-badge-2{
+  position:absolute;
+  bottom:-14px;right:-14px;
+  padding:12px 20px;
+  background:linear-gradient(135deg,var(--red),var(--red-bright));
+  color:var(--white);
+  border-radius:14px;
+  font-weight:900;
+  font-size:.85rem;
+  box-shadow:0 12px 30px rgba(183,28,43,.5);
+  z-index:3;
+  animation:float 3s ease-in-out infinite .5s;
+}
 
-/* من نحن */
-.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.about-text h3{font-size:26px;font-weight:900;color:var(--blue);margin-bottom:16px}
-.about-text p{color:#43566b;margin-bottom:16px;font-size:16px}
-.about-list{list-style:none;display:grid;gap:12px;margin-top:22px}
-.about-list li{display:flex;gap:12px;align-items:flex-start;font-weight:600;color:#33465c}
-.about-list .tick{
-  flex:0 0 26px;height:26px;border-radius:50%;
-  background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;
-  display:grid;place-items:center;font-size:14px;font-weight:900;margin-top:4px;
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
 }
-.about-visual{
-  background:linear-gradient(135deg,var(--blue),var(--blue-light));
-  border-radius:26px;padding:40px;color:#fff;box-shadow:var(--shadow-lg);
-  display:grid;gap:18px;
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
 }
-.about-visual .item{background:rgba(255,255,255,.12);border-radius:14px;padding:16px 20px}
-.about-visual .item b{display:block;font-size:16px;margin-bottom:4px}
-.about-visual .item small{color:#d6e6f7;font-size:13.5px}
+@keyframes fadeIn{
+  from{opacity:0;transform:scale(.96)}
+  to{opacity:1;transform:scale(1)}
+}
 
-/* الخدمات */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+/* ==================== QUICK SERVICES ==================== */
+.quick-services{
+  padding:0 0 100px;
+  margin-top:-50px;
+  position:relative;z-index:10;
+}
+.qs-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:18px;
+}
+.qs-card{
+  background:linear-gradient(160deg,var(--navy-3),var(--navy-2));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius);
+  overflow:hidden;
+  transition:all .4s;
+  cursor:pointer;
+  position:relative;
+}
+.qs-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(240,180,0,.45);
+  box-shadow:0 24px 50px rgba(0,0,0,.5);
+}
+.qs-img{
+  aspect-ratio:4/3;
+  overflow:hidden;
+  position:relative;
+}
+.qs-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s;
+}
+.qs-card:hover .qs-img img{transform:scale(1.1)}
+.qs-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,var(--navy-3),transparent 60%);
+}
+.qs-body{
+  padding:14px 14px 16px;
+  text-align:center;
+}
+.qs-body h3{
+  font-size:1rem;font-weight:800;
+  margin-bottom:10px;
+}
+.qs-body .qs-btn{
+  display:inline-block;
+  padding:6px 16px;
+  background:rgba(183,28,43,.2);
+  border:1px solid rgba(183,28,43,.5);
+  border-radius:50px;
+  font-size:.78rem;
+  font-weight:700;
+  color:var(--white);
+  transition:all .3s;
+}
+.qs-card:hover .qs-btn{
+  background:var(--red);
+  border-color:var(--red);
+}
+
+/* ==================== BRANDS ==================== */
+.brands-section{
+  background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);
+  position:relative;
+}
+.brands-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:14px;
+}
+.brand-card{
+  padding:26px 14px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;
+  text-align:center;
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  font-size:1.05rem;
+  letter-spacing:.5px;
+  color:var(--gray);
+  transition:all .35s;
+  position:relative;
+  overflow:hidden;
+}
+.brand-card::before{
+  content:'';position:absolute;top:0;left:-100%;
+  width:100%;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  transition:left .6s;
+}
+.brand-card:hover{
+  color:var(--white);
+  border-color:rgba(240,180,0,.4);
+  transform:translateY(-4px);
+  background:rgba(240,180,0,.06);
+}
+.brand-card:hover::before{left:100%}
+.brands-footer{
+  text-align:center;
+  margin-top:40px;
+  font-size:1.1rem;
+  font-weight:700;
+  color:var(--gold);
+}
+
+/* ==================== SERVICES ==================== */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
 .service-card{
-  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
-  padding:30px 24px;text-align:center;transition:.3s;box-shadow:var(--shadow);
+  background:linear-gradient(160deg,var(--navy-3),var(--navy-2));
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  overflow:hidden;
+  transition:all .4s;
+  position:relative;
 }
-.service-card:hover{transform:translateY(-8px);border-color:#bcdcf7;box-shadow:var(--shadow-lg)}
+.service-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(240,180,0,.4);
+  box-shadow:0 24px 60px rgba(0,0,0,.55);
+}
+.service-img{
+  aspect-ratio:16/10;
+  overflow:hidden;
+  position:relative;
+}
+.service-img img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .7s;
+}
+.service-card:hover .service-img img{transform:scale(1.08)}
+.service-img::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to top,var(--navy-3),transparent 55%);
+}
 .service-icon{
-  width:70px;height:70px;margin:0 auto 16px;border-radius:20px;
-  display:grid;place-items:center;font-size:34px;
-  background:linear-gradient(135deg,#e7f2fd,#d3e7fb);
+  position:absolute;top:16px;right:16px;
+  width:52px;height:52px;
+  background:linear-gradient(135deg,var(--red),var(--red-bright));
+  border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  z-index:2;
+  box-shadow:0 8px 20px rgba(183,28,43,.4);
 }
-.service-card h4{font-size:18px;font-weight:800;color:var(--blue);margin-bottom:8px}
-.service-card p{font-size:14.5px;color:var(--muted)}
+.service-icon svg{width:26px;height:26px;color:#fff}
+.service-body{padding:24px}
+.service-body h3{
+  font-size:1.25rem;
+  font-weight:800;
+  margin-bottom:10px;
+}
+.service-body p{
+  font-size:.92rem;
+  color:var(--gray);
+  margin-bottom:18px;
+  line-height:1.7;
+}
+.service-link{
+  display:inline-flex;align-items:center;gap:8px;
+  color:var(--gold);
+  font-weight:700;
+  font-size:.9rem;
+  transition:gap .3s;
+}
+.service-link:hover{gap:14px}
+.service-link svg{width:16px;height:16px;transform:rotate(180deg)}
 
-/* المعرض */
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+/* ==================== WHY TRUST ==================== */
+.why-section{
+  background:
+    radial-gradient(ellipse at 80% 20%,rgba(183,28,43,.12),transparent 55%),
+    radial-gradient(ellipse at 20% 80%,rgba(240,180,0,.08),transparent 55%),
+    var(--navy-2);
+}
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+.why-card{
+  padding:30px 26px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  transition:all .4s;
+  position:relative;
+  overflow:hidden;
+}
+.why-card::before{
+  content:'';position:absolute;top:0;right:0;
+  width:4px;height:0;
+  background:linear-gradient(180deg,var(--red),var(--gold));
+  transition:height .5s;
+}
+.why-card:hover{
+  background:rgba(255,255,255,.05);
+  border-color:rgba(240,180,0,.3);
+  transform:translateX(-6px);
+}
+.why-card:hover::before{height:100%}
+.why-icon{
+  width:56px;height:56px;
+  background:linear-gradient(135deg,rgba(183,28,43,.25),rgba(240,180,0,.15));
+  border:1px solid rgba(240,180,0,.25);
+  border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;
+}
+.why-icon svg{width:28px;height:28px;color:var(--gold)}
+.why-card h3{
+  font-size:1.15rem;
+  font-weight:800;
+  margin-bottom:8px;
+}
+.why-card p{
+  font-size:.9rem;
+  color:var(--gray);
+  line-height:1.7;
+}
+
+/* ==================== GALLERY ==================== */
+.gallery-section{
+  background:var(--navy);
+}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:22px;
+}
 .gallery-item{
-  position:relative;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;
-  background:#fff;border:1px solid var(--border);box-shadow:var(--shadow);
-  transition:.3s;
+  border-radius:16px;
+  overflow:hidden;
+  background:var(--navy-3);
+  border:1px solid rgba(255,255,255,.08);
+  cursor:pointer;
+  transition:all .4s;
+  position:relative;
 }
-.gallery-item:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.gallery-item img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:.4s}
-.gallery-item:hover img{transform:scale(1.06)}
-.gallery-item .ph{
-  width:100%;height:100%;display:grid;place-content:center;gap:6px;text-align:center;
-  background:repeating-linear-gradient(45deg,#f7fbff,#f7fbff 12px,#eef6ff 12px,#eef6ff 24px);
-  border:2px dashed #b9d6f2;border-radius:var(--radius);color:var(--blue-2);
+.gallery-item:hover{
+  transform:translateY(-6px);
+  border-color:rgba(240,180,0,.4);
+  box-shadow:0 24px 55px rgba(0,0,0,.55);
 }
-.gallery-item .ph span{font-weight:900;font-size:17px}
-.gallery-item .ph small{color:var(--muted);font-size:12.5px}
-.gallery-item .num{
-  position:absolute;top:10px;inset-inline-start:10px;z-index:3;
-  background:linear-gradient(135deg,var(--accent),#ffb547);
-  color:#3a2200;font-weight:900;font-size:14px;
-  min-width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
-  box-shadow:0 6px 16px rgba(255,149,0,.4);
+.gallery-pair{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  aspect-ratio:16/10;
 }
+.gallery-half{
+  position:relative;
+  overflow:hidden;
+}
+.gallery-half img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .6s;
+}
+.gallery-item:hover .gallery-half img{transform:scale(1.05)}
+.gallery-half.before::after{
+  content:'';position:absolute;inset:0;
+  background:rgba(183,28,43,.12);
+}
+.gallery-half.after::after{
+  content:'';position:absolute;inset:0;
+  background:rgba(37,211,102,.1);
+}
+.gallery-badge{
+  position:absolute;top:10px;right:10px;
+  padding:5px 12px;
+  border-radius:50px;
+  font-size:.72rem;
+  font-weight:800;
+  z-index:2;
+  backdrop-filter:blur(10px);
+}
+.gallery-badge.before{
+  background:rgba(183,28,43,.85);
+  color:#fff;
+}
+.gallery-badge.after{
+  background:rgba(30,178,84,.85);
+  color:#fff;
+}
+.gallery-caption{
+  padding:16px 18px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.gallery-caption h4{
+  font-size:1rem;
+  font-weight:800;
+}
+.gallery-caption span{
+  font-size:.8rem;
+  color:var(--gold);
+  font-weight:700;
+}
+.zoom-icon{
+  position:absolute;bottom:12px;left:12px;
+  width:38px;height:38px;
+  background:rgba(240,180,0,.9);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:all .3s;
+  z-index:2;
+}
+.gallery-item:hover .zoom-icon{opacity:1}
+.zoom-icon svg{width:18px;height:18px;color:var(--navy)}
 
-/* نموذج الطلب */
-.order-section{background:linear-gradient(180deg,#eef6ff 0%, #f4f8fc 100%)}
-.form-wrap{
-  background:#fff;border-radius:26px;box-shadow:var(--shadow-lg);
-  padding:clamp(24px,4vw,46px);max-width:900px;margin:0 auto;border:1px solid var(--border);
-}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.field{display:flex;flex-direction:column;gap:8px}
-.field.full{grid-column:1/-1}
-.field label{font-weight:800;font-size:14.5px;color:var(--blue)}
-.field label .req{color:#e74c3c}
-.field input,.field select,.field textarea{
-  font-family:inherit;font-size:15px;color:var(--text);
-  padding:13px 16px;border:1.6px solid var(--border);border-radius:12px;
-  background:#fbfdff;transition:.2s;width:100%;
-}
-.field textarea{resize:vertical;min-height:120px;line-height:1.8}
-.field input:focus,.field select:focus,.field textarea:focus{
-  outline:none;border-color:var(--blue-light);background:#fff;
-  box-shadow:0 0 0 4px rgba(30,127,212,.12);
-}
-.field .hint{font-size:12.5px;color:var(--muted)}
-.error-msg{color:#e74c3c;font-size:12.5px;font-weight:700;display:none}
-.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:#e74c3c;background:#fff6f6}
-.field.invalid .error-msg{display:block}
-
-.form-actions{margin-top:28px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center}
-.form-actions .btn{min-width:250px;justify-content:center}
-.form-note{
-  margin-top:18px;text-align:center;font-size:13.5px;color:var(--muted);
-  background:#f2f9ff;border:1px dashed #bcdcf7;border-radius:12px;padding:12px;
-}
-
-/* التواصل */
-.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
-.contact-card{
-  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
-  padding:28px;text-align:center;box-shadow:var(--shadow);transition:.3s;
-}
-.contact-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-.contact-card .ico{font-size:34px;margin-bottom:12px}
-.contact-card h4{color:var(--blue);font-weight:800;margin-bottom:6px}
-.contact-card p,.contact-card a{color:var(--muted);font-size:15px;direction:ltr;display:inline-block}
-.contact-card a:hover{color:var(--blue-light)}
-
-/* الفوتر */
-footer{background:var(--blue);color:#cfe2f5;padding:50px 0 24px;margin-top:20px}
-.footer-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:34px}
-.footer-brand{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-.footer-brand img{width:62px;height:62px;object-fit:contain;background:#fff;border-radius:14px;padding:5px}
-.footer-brand strong{color:#fff;font-size:19px;font-weight:900;display:block}
-.footer-brand small{font-size:12.5px;color:#a9c6e2}
-footer h5{color:#fff;font-size:16px;font-weight:800;margin-bottom:14px}
-footer ul{list-style:none;display:grid;gap:9px}
-footer ul a{font-size:14.5px;transition:.2s}
-footer ul a:hover{color:var(--accent);padding-inline-start:5px}
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.13);padding-top:20px;text-align:center;
-  font-size:13.5px;color:#a9c6e2;
-}
-
-/* زر واتساب عائم */
-.float-wa{
-  position:fixed;bottom:22px;inset-inline-start:22px;z-index:900;
-  width:60px;height:60px;border-radius:50%;
-  background:linear-gradient(135deg,#25D366,#128C7E);
-  display:grid;place-items:center;color:#fff;font-size:30px;
-  box-shadow:0 12px 30px rgba(37,211,102,.45);
-  transition:.3s;animation:pulse 2.4s infinite;
-}
-.float-wa:hover{transform:scale(1.1)}
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,.55)}
-  70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
-  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
-}
-
-/* التنبيه */
-.toast{
-  position:fixed;bottom:30px;inset-inline-end:30px;z-index:2000;
-  background:var(--blue);color:#fff;padding:14px 24px;border-radius:12px;
-  font-weight:700;box-shadow:var(--shadow-lg);
-  opacity:0;transform:translateY(20px);pointer-events:none;transition:.35s;
-}
-.toast.show{opacity:1;transform:translateY(0)}
-
-/* لايت بوكس */
+/* LIGHTBOX */
 .lightbox{
-  position:fixed;inset:0;background:rgba(6,22,40,.92);z-index:3000;
-  display:none;place-items:center;padding:24px;
+  position:fixed;inset:0;
+  background:rgba(5,10,22,.96);
+  z-index:2000;
+  display:none;
+  align-items:center;justify-content:center;
+  padding:24px;
+  backdrop-filter:blur(10px);
 }
-.lightbox.open{display:grid}
-.lightbox img{max-width:92vw;max-height:86vh;border-radius:14px;box-shadow:0 30px 70px rgba(0,0,0,.6)}
-.lightbox .close{
-  position:absolute;top:22px;inset-inline-end:26px;color:#fff;font-size:38px;
-  cursor:pointer;line-height:1;background:none;border:none;
+.lightbox.open{display:flex}
+.lightbox img{
+  max-width:95vw;max-height:88vh;
+  border-radius:12px;
+  box-shadow:0 30px 80px rgba(0,0,0,.8);
+}
+.lightbox-close{
+  position:absolute;top:20px;left:20px;
+  width:48px;height:48px;
+  background:rgba(255,255,255,.1);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.6rem;
+  transition:all .3s;
+}
+.lightbox-close:hover{background:var(--red)}
+
+/* ==================== ORDER FORM ==================== */
+.order-section{
+  background:
+    radial-gradient(ellipse at 15% 15%,rgba(183,28,43,.15),transparent 50%),
+    radial-gradient(ellipse at 85% 85%,rgba(240,180,0,.08),transparent 50%),
+    linear-gradient(160deg,var(--navy-2),var(--navy));
+  position:relative;
+}
+.order-wrapper{
+  max-width:920px;
+  margin:0 auto;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:22px;
+  padding:44px;
+  backdrop-filter:blur(10px);
+  box-shadow:0 30px 80px rgba(0,0,0,.45);
+  position:relative;
+}
+.order-wrapper::before{
+  content:'';position:absolute;top:0;right:0;left:0;height:4px;
+  background:linear-gradient(90deg,var(--red),var(--gold),var(--red));
+  border-radius:22px 22px 0 0;
+}
+.order-form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.form-group{display:flex;flex-direction:column;gap:8px}
+.form-group.full{grid-column:span 2}
+.form-group label{
+  font-size:.92rem;
+  font-weight:700;
+  color:var(--white);
+}
+.form-group label .req{color:var(--red-bright)}
+.form-group input,
+.form-group select,
+.form-group textarea{
+  padding:14px 16px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  color:var(--white);
+  font-size:.95rem;
+  transition:all .3s;
+  width:100%;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder{color:var(--gray-2)}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color:var(--gold);
+  background:rgba(240,180,0,.06);
+  box-shadow:0 0 0 3px rgba(240,180,0,.12);
+}
+.form-group select{
+  appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23f0b400' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:left 16px center;
+  padding-left:42px;
+  cursor:pointer;
+}
+.form-group select option{background:var(--navy-3);color:#fff}
+.form-group textarea{resize:vertical;min-height:110px}
+
+/* TIME PICKER */
+.time-picker{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.time-opt{
+  flex:1;min-width:90px;
+  padding:12px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  text-align:center;
+  font-weight:700;
+  font-size:.9rem;
+  color:var(--gray);
+  cursor:pointer;
+  transition:all .3s;
+}
+.time-opt:hover{border-color:rgba(240,180,0,.4);color:#fff}
+.time-opt.active{
+  background:linear-gradient(135deg,var(--gold),var(--gold-2));
+  color:var(--navy);
+  border-color:var(--gold);
+  box-shadow:0 6px 18px rgba(240,180,0,.35);
 }
 
-/* ================= الاستجابة ================= */
-@media (max-width:980px){
-  .hero-inner{grid-template-columns:1fr;text-align:center}
-  .hero p{margin-inline:auto}
-  .hero-btns{justify-content:center}
-  .about-inner{grid-template-columns:1fr}
-  .footer-inner{grid-template-columns:1fr 1fr}
+/* DATE QUICK */
+.date-quick{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
 }
-@media (max-width:760px){
-  .menu-btn{display:block}
-  .nav{
-    position:absolute;top:100%;inset-inline:0;background:#fff;
-    flex-direction:column;align-items:stretch;gap:4px;padding:14px;
-    border-bottom:1px solid var(--border);box-shadow:var(--shadow-lg);
-    display:none;
-  }
-  .nav.open{display:flex}
-  .nav a{padding:12px 16px}
-  .form-grid{grid-template-columns:1fr}
-  .footer-inner{grid-template-columns:1fr;gap:26px}
-  section{padding:60px 0}
-  .float-wa{width:54px;height:54px;font-size:26px}
-  .brand-text span{display:none}
+.date-btn{
+  padding:8px 16px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50px;
+  font-size:.82rem;
+  font-weight:700;
+  color:var(--gray);
+  cursor:pointer;
+  transition:all .3s;
 }
+.date-btn:hover{border-color:rgba(240,180,0,.4);color:#fff}
+.date-btn.active{
+  background:var(--red);
+  border-color:var(--red);
+  color:#fff;
+}
+
+/* SUBMIT */
+.order-submit{
+  grid-column:span 2;
+  margin-top:10px;
+}
+.order-submit .btn{
+  width:100%;
+  padding:20px;
+  font-size:1.15rem;
+  font-weight:800;
+  letter-spacing:.5px;
+}
+
+/* SUCCESS */
+.order-success{
+  display:none;
+  text-align:center;
+  padding:40px 20px;
+}
+.order-success.show{display:block}
+.success-icon{
+  width:90px;height:90px;
+  margin:0 auto 24px;
+  background:linear-gradient(135deg,#1eb254,var(--wa));
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 0 40px rgba(37,211,102,.5);
+  animation:successPop .6s cubic-bezier(.4,0,.2,1);
+}
+.success-icon svg{width:48px;height:48px;color:#fff}
+@keyframes successPop{
+  0%{transform:scale(0);opacity:0}
+  60%{transform:scale(1.15)}
+  100%{transform:scale(1);opacity:1}
+}
+.order-success h3{
+  font-size:1.6rem;
+  font-weight:900;
+  margin-bottom:12px;
+  color:var(--gold);
+}
+.order-success p{
+  color:var(--gray);
+  margin-bottom:28px;
+  font-size:1.05rem;
+}
+.success-actions{
+  display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+}
+
+/* ==================== LOCATION ==================== */
+.location-section{background:var(--navy-2)}
+.location-wrapper{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:30px;
+  align-items:stretch;
+}
+.location-info{
+  background:linear-gradient(160deg,var(--navy-3),var(--navy-2));
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:18px;
+  padding:38px;
+  display:flex;flex-direction:column;gap:22px;
+}
+.location-item{
+  display:flex;gap:16px;align-items:flex-start;
+}
+.location-item .icon{
+  width:48px;height:48px;
+  background:linear-gradient(135deg,var(--red),var(--red-bright));
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.location-item .icon svg{width:24px;height:24px;color:#fff}
+.location-item h4{
+  font-size:.85rem;
+  color:var(--gold);
+  font-weight:700;
+  margin-bottom:4px;
+}
+.location-item p{
+  font-size:1rem;
+  font-weight:600;
+  color:#fff;
+}
+.location-item a{
+  font-size:1.05rem;
+  font-weight:800;
+  color:#fff;
+  direction:ltr;
+  display:inline-block;
+  transition:color .3s;
+}
+.location-item a:hover{color:var(--gold)}
+.location-map{
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.1);
+  min-height:420px;
+  background:var(--navy-3);
+  position:relative;
+}
+.location-map iframe{
+  width:100%;height:100%;
+  border:0;
+  filter:grayscale(.3) invert(.9) hue-rotate(180deg);
+  min-height:420px;
+}
+
+/* ==================== CTA BANNER ==================== */
+.cta-banner{
+  padding:70px 0;
+  background:
+    linear-gradient(135deg,rgba(183,28,43,.95),rgba(139,20,32,.95)),
+    var(--red);
+  position:relative;
+  overflow:hidden;
+}
+.cta-banner::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+.cta-inner{
+  position:relative;z-index:2;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:30px;flex-wrap:wrap;
+}
+.cta-text h2{
+  font-size:clamp(1.5rem,3.5vw,2.2rem);
+  font-weight:900;
+  margin-bottom:8px;
+}
+.cta-text p{
+  font-size:1.05rem;
+  opacity:.9;
+}
+.cta-actions{display:flex;gap:14px;flex-wrap:wrap}
+.cta-actions .btn-gold{background:#fff;color:var(--red)}
+.cta-actions .btn-gold:hover{box-shadow:0 14px 34px rgba(255,255,255,.35)}
+
+/* ==================== FOOTER ==================== */
+.footer{
+  background:var(--navy);
+  border-top:1px solid rgba(255,255,255,.08);
+  padding:70px 0 0;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.6fr 1fr 1fr 1.3fr;
+  gap:40px;
+  padding-bottom:50px;
+}
+.footer-brand .logo{margin-bottom:20px}
+.footer-brand p{
+  color:var(--gray);
+  font-size:.92rem;
+  line-height:1.8;
+  margin-bottom:20px;
+  max-width:320px;
+}
+.footer-social{
+  display:flex;gap:12px;
+}
+.footer-social a{
+  width:44px;height:44px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .3s;
+}
+.footer-social a:hover{
+  background:var(--red);
+  border-color:var(--red);
+  transform:translateY(-3px);
+}
+.footer-social svg{width:20px;height:20px;color:#fff}
+
+.footer-col h4{
+  font-size:1.05rem;
+  font-weight:800;
+  margin-bottom:20px;
+  color:#fff;
+  position:relative;
+  padding-bottom:12px;
+}
+.footer-col h4::after{
+  content:'';position:absolute;bottom:0;right:0;
+  width:36px;height:3px;
+  background:linear-gradient(90deg,var(--red),var(--gold));
+  border-radius:2px;
+}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-col ul a{
+  color:var(--gray);
+  font-size:.92rem;
+  transition:all .3s;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.footer-col ul a:hover{color:var(--gold);transform:translateX(-4px)}
+.footer-col ul a::before{
+  content:'‹';color:var(--red);font-weight:900;
+}
+
+.footer-contact-item{
+  display:flex;gap:12px;align-items:center;
+  margin-bottom:14px;
+}
+.footer-contact-item svg{width:18px;height:18px;color:var(--gold);flex-shrink:0}
+.footer-contact-item a{
+  color:var(--gray);font-size:.92rem;font-weight:600;
+  transition:color .3s;direction:ltr;
+}
+.footer-contact-item a:hover{color:var(--gold)}
+.footer-wa-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 22px;
+  background:linear-gradient(135deg,#1eb254,var(--wa));
+  border-radius:50px;
+  font-weight:800;
+  font-size:.9rem;
+  color:#fff;
+  margin-top:10px;
+  transition:all .3s;
+}
+.footer-wa-btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(37,211,102,.45)}
+.footer-wa-btn svg{width:18px;height:18px}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.06);
+  padding:24px 0;
+  text-align:center;
+  color:var(--gray-2);
+  font-size:.85rem;
+}
+.footer-bottom .gold{color:var(--gold);font-weight:700}
+
+/* ==================== STICKY MOBILE BAR ==================== */
+.mobile-bar{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;
+  z-index:998;
+  background:rgba(10,20,40,.97);
+  backdrop-filter:blur(20px);
+  border-top:1px solid rgba(255,255,255,.1);
+  padding:10px 12px;
+  gap:10px;
+  box-shadow:0 -8px 30px rgba(0,0,0,.5);
+}
+.mobile-bar a{
+  flex:1;
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  padding:10px 6px;
+  border-radius:12px;
+  font-size:.72rem;
+  font-weight:700;
+  transition:all .3s;
+}
+.mobile-bar a svg{width:22px;height:22px}
+.mobile-bar .mb-call{background:rgba(183,28,43,.2);color:#fff;border:1px solid rgba(183,28,43,.4)}
+.mobile-bar .mb-wa{background:linear-gradient(135deg,#1eb254,var(--wa));color:#fff}
+.mobile-bar .mb-order{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:var(--navy)}
+.mobile-bar a:active{transform:scale(.95)}
+
+/* ==================== ANIMATIONS ON SCROLL ==================== */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+.reveal-delay-5{transition-delay:.5s}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width:1100px){
+  .nav,.header-contact .btn-header-order,.header-phone{display:none}
+  .burger{display:flex}
+  .qs-grid{grid-template-columns:repeat(3,1fr)}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .hero-grid{grid-template-columns:1fr;gap:50px}
+  .hero-visual{max-width:560px;margin:0 auto}
+  .location-wrapper{grid-template-columns:1fr}
+  .location-map{min-height:320px}
+  .location-map iframe{min-height:320px}
+}
+@media (max-width:768px){
+  .section{padding:70px 0}
+  .header-inner{padding:12px 16px}
+  .qs-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .services-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:30px}
+  .order-form{grid-template-columns:1fr}
+  .form-group.full{grid-column:span 1}
+  .order-submit{grid-column:span 1}
+  .order-wrapper{padding:28px 20px}
+  .hero{padding:120px 0 60px;min-height:auto}
+  .hero-buttons .btn{flex:1;min-width:140px;padding:14px 20px;font-size:.92rem}
+  .hero-brand{gap:14px}
+  .hero-logo-mark{width:52px;height:52px}
+  .hero-trust{font-size:clamp(3rem,16vw,4.5rem)}
+  .cta-inner{flex-direction:column;text-align:center}
+  .cta-actions{justify-content:center;width:100%}
+  .cta-actions .btn{flex:1;min-width:150px}
+  .mobile-bar{display:flex}
+  body{padding-bottom:80px}
+  .gallery-grid{grid-template-columns:1fr}
+  .brands-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .brand-card{padding:20px 10px;font-size:.9rem}
+  .time-opt{min-width:70px;font-size:.82rem;padding:10px 8px}
+}
+@media (max-width:420px){
+  .qs-grid{grid-template-columns:1fr 1fr}
+  .hero-slogan{font-size:.85rem;padding:10px 18px}
+  .btn{padding:13px 22px;font-size:.9rem}
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--navy)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,var(--red),var(--gold));border-radius:5px}
+::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+
+::selection{background:var(--gold);color:var(--navy)}
 </style>
 </head>
 <body>
 
-<!-- ================= الهيدر ================= -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="#home" class="brand">
-      <img src="https://i.postimg.cc/vHbYGnf2/logo.jpg" alt="شعار مركز تراست">
-      <div class="brand-text">
-        <strong>مركز تراست</strong>
-        <span>لصيانة الأجهزة الكهربائية - الإسكندرية</span>
+<!-- ==================== HEADER ==================== -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#hero" class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 60 60" width="44" height="44">
+          <defs>
+            <linearGradient id="markGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#d92030"/>
+              <stop offset="50%" stop-color="#f0b400"/>
+              <stop offset="100%" stop-color="#b71c2b"/>
+            </linearGradient>
+          </defs>
+          <path d="M8 42 Q8 18 30 18 Q52 18 52 42" stroke="url(#markGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <path d="M16 42 Q16 28 30 28 Q44 28 44 42" stroke="url(#markGrad)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <path d="M30 18 L30 8 M30 8 L24 14 M30 8 L36 14" stroke="#f0b400" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="30" cy="42" r="4" fill="#d92030"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-trust">
+          <span class="t">T</span><span class="r">R</span><span class="u">U</span><span class="s">S</span><span class="t2">T</span>
+        </span>
+        <span class="logo-sub">مركز تراست</span>
       </div>
     </a>
 
-    <nav class="nav" id="nav">
-      <a href="#home">الرئيسية</a>
-      <a href="#about">من نحن</a>
+    <nav class="nav">
+      <a href="#hero" class="active">الرئيسية</a>
       <a href="#services">خدماتنا</a>
+      <a href="#brands">الماركات</a>
       <a href="#gallery">أعمالنا</a>
-      <a href="#order">طلب صيانة</a>
-      <a href="#contact">تواصل معنا</a>
-      <a href="#order" class="cta">اطلب صيانة الآن</a>
+      <a href="#location">اتصل بنا</a>
     </nav>
 
-    <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+    <div class="header-contact">
+      <a href="tel:01156661812" class="header-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        01156661812
+      </a>
+      <a href="https://wa.me/201156661812?text=مرحباً%20مركز%20تراست،%20أريد%20الاستفسار%20عن%20خدمات%20الصيانة" target="_blank" class="header-wa" aria-label="واتساب">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <a href="#order" class="btn-header-order">اطلب صيانة</a>
+      <button class="burger" id="burger" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
-<!-- ================= الهيرو ================= -->
-<section class="hero" id="home">
-  <div class="container hero-inner">
-    <div>
-      <span class="hero-badge">⚡ خدمة سريعة في الإسكندرية • فنيون متخصصون • ضمان على الصيانة</span>
-      <h1>مركز <span>تراست</span> لصيانة الأجهزة الكهربائية</h1>
-      <p>
-        نُصلح جميع الأجهزة المنزلية الكهربائية في <strong>الإسكندرية</strong> بأيدي فنيين محترفين وبقطع غيار أصلية.
-        ثلاجات، غسالات، بوتاجازات، مكيفات، فريزرات وأكثر — مع فحص دقيق وضمان على العمل.
-      </p>
-      <div class="hero-btns">
-        <a href="#order" class="btn btn-primary">🔧 اطلب صيانة الآن</a>
-        <a href="#services" class="btn btn-ghost">تعرف على خدماتنا</a>
-      </div>
-    </div>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero" onclick="closeMenu()">الرئيسية</a>
+  <a href="#services" onclick="closeMenu()">خدماتنا</a>
+  <a href="#brands" onclick="closeMenu()">الماركات</a>
+  <a href="#gallery" onclick="closeMenu()">أعمالنا</a>
+  <a href="#order" onclick="closeMenu()">اطلب صيانة</a>
+  <a href="#location" onclick="closeMenu()">اتصل بنا</a>
+  <div class="mm-divider"></div>
+  <a href="tel:01156661812" class="mm-phone">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    01156661812
+  </a>
+  <a href="tel:01124997077" class="mm-phone">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    01124997077
+  </a>
+  <a href="https://wa.me/201156661812?text=مرحباً%20مركز%20تراست،%20أريد%20الاستفسار%20عن%20خدمات%20الصيانة" target="_blank" class="mm-wa">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    تواصل واتساب
+  </a>
+</div>
 
-    <div class="hero-card">
-      <img src="https://i.postimg.cc/vHbYGnf2/logo.jpg" alt="مركز تراست">
-      <h3>مركز تراست</h3>
-      <p>ثقة • إتقان • سرعة في الخدمة</p>
-      <div class="hero-stats">
-        <div><b>+10</b><small>سنوات خبرة</small></div>
-        <div><b>+5000</b><small>عميل راضٍ</small></div>
-        <div><b>100%</b><small>ضمان الصيانة</small></div>
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-brand">
+          <svg class="hero-logo-mark" viewBox="0 0 60 60">
+            <defs>
+              <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#d92030"/>
+                <stop offset="50%" stop-color="#f0b400"/>
+                <stop offset="100%" stop-color="#b71c2b"/>
+              </linearGradient>
+            </defs>
+            <path d="M8 42 Q8 18 30 18 Q52 18 52 42" stroke="url(#heroGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M16 42 Q16 28 30 28 Q44 28 44 42" stroke="url(#heroGrad)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7"/>
+            <path d="M30 18 L30 8 M30 8 L24 14 M30 8 L36 14" stroke="#f0b400" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="30" cy="42" r="4" fill="#d92030"/>
+          </svg>
+          <span class="hero-trust">
+            <span class="t">T</span><span class="r">R</span><span class="u">U</span><span class="s">S</span><span class="t2">T</span>
+          </span>
+        </div>
+
+        <h1 class="hero-tagline">مركز <span class="gold">تراست</span></h1>
+        <p class="hero-service-line">صيانة الأجهزة المنزلية</p>
+        <div class="hero-slogan">قبل ما تحتار... كلم تراست وخد القرار</div>
+
+        <div class="hero-buttons">
+          <a href="#order" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            اطلب صيانة الآن
+          </a>
+          <a href="https://wa.me/201156661812?text=مرحباً%20مركز%20تراست،%20أريد%20الاستفسار%20عن%20خدمات%20الصيانة" target="_blank" class="btn btn-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            تواصل معنا واتساب
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-badge">خبرة وثقة</div>
+        <div class="hero-badge-2">خدمة منزلية</div>
+        <div class="hero-visual-grid">
+          <div class="hero-card">
+            <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&q=80&auto=format&fit=crop" alt="صيانة غسالات" loading="eager">
+            <div class="hero-card-label"><span class="dot"></span>غسالات</div>
+          </div>
+          <div class="hero-card tall">
+            <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&q=80&auto=format&fit=crop" alt="صيانة ثلاجات" loading="eager">
+            <div class="hero-card-label"><span class="dot"></span>ثلاجات</div>
+          </div>
+          <div class="hero-card">
+            <img src="https://images.unsplash.com/photo-1631545806609-25e7b1f2e1c0?w=600&q=80&auto=format&fit=crop" alt="صيانة تكييفات" loading="eager">
+            <div class="hero-card-label"><span class="dot"></span>تكييفات</div>
+          </div>
+          <div class="hero-card wide">
+            <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=800&q=80&auto=format&fit=crop" alt="صيانة بوتاجازات" loading="eager">
+            <div class="hero-card-label"><span class="dot"></span>بوتاجازات وسخانات</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= من نحن ================= -->
-<section id="about">
+<!-- ==================== QUICK SERVICES ==================== -->
+<section class="quick-services">
   <div class="container">
-    <div class="section-head">
-      <span class="section-tag">من نحن</span>
-      <h2>تعريف بمركز تراست</h2>
-      <p>مركز متخصص في صيانة وإصلاح الأجهزة الكهربائية المنزلية في الإسكندرية، نعمل على إعادة أجهزتك للعمل بكفاءة عالية وبأقل تكلفة ممكنة.</p>
-    </div>
-
-    <div class="about-inner">
-      <div class="about-text">
-        <h3>خبرة تُعتمد عليها في صيانة أجهزتك</h3>
-        <p>
-          <strong>مركز تراست</strong> هو مركز متخصص في صيانة الأجهزة الكهربائية المنزلية في
-          <strong>مدينة الإسكندرية</strong>، يقدم خدماته للأسر والمنازل والمطاعم والمنشآت الصغيرة.
-          نعتمد في عملنا على فريق من الفنيين المتخصصين، وأدوات فحص حديثة، وقطع غيار أصلية مضمونة.
-        </p>
-        <p>
-          نؤمن بأن العميل يستحق خدمة واضحة وصادقة، لذلك نقوم بفحص الجهاز بدقة،
-          وتوضيح المشكلة والتكلفة قبل البدء بالعمل، ولا نستلم أي مبلغ قبل إتمام
-          الإصلاح والتأكد من عمل الجهاز بشكل سليم.
-        </p>
-
-        <ul class="about-list">
-          <li><span class="tick">✓</span> فحص أولي دقيق وتشخيص واضح للمشكلة قبل الإصلاح.</li>
-          <li><span class="tick">✓</span> صيانة جميع الماركات والموديلات المحلية والمستوردة.</li>
-          <li><span class="tick">✓</span> قطع غيار أصلية مع ضمان على القطعة والصيانة.</li>
-          <li><span class="tick">✓</span> خدمة الصيانة في الموقع داخل الإسكندرية أو داخل المركز حسب الحالة.</li>
-          <li><span class="tick">✓</span> أسعار مناسبة وشفافة بدون تكاليف مخفية.</li>
-        </ul>
-      </div>
-
-      <div class="about-visual">
-        <div class="item">
-          <b>🔍 فحص وتشخيص</b>
-          <small>نحدد سبب العطل بدقة باستخدام أجهزة قياس حديثة.</small>
-        </div>
-        <div class="item">
-          <b>🛠️ إصلاح احترافي</b>
-          <small>إصلاح أو استبدال القطع التالفة بقطع أصلية مضمونة.</small>
-        </div>
-        <div class="item">
-          <b>✅ اختبار ما بعد الصيانة</b>
-          <small>نجرب الجهاز أمام العميل للتأكد من زوال المشكلة تماماً.</small>
-        </div>
-        <div class="item">
-          <b>🚚 خدمة سريعة في الإسكندرية</b>
-          <small>الوصول في أسرع وقت ممكن وتقليل مدة تعطّل الجهاز.</small>
-        </div>
-      </div>
+    <div class="qs-grid">
+      <a href="#order" class="qs-card reveal" onclick="preselectDevice('غسالة')">
+        <div class="qs-img"><img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=400&q=80&auto=format&fit=crop" alt="غسالات" loading="lazy"></div>
+        <div class="qs-body"><h3>غسالات</h3><span class="qs-btn">اطلب صيانة</span></div>
+      </a>
+      <a href="#order" class="qs-card reveal reveal-delay-1" onclick="preselectDevice('ثلاجة')">
+        <div class="qs-img"><img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&q=80&auto=format&fit=crop" alt="ثلاجات" loading="lazy"></div>
+        <div class="qs-body"><h3>ثلاجات</h3><span class="qs-btn">اطلب صيانة</span></div>
+      </a>
+      <a href="#order" class="qs-card reveal reveal-delay-2" onclick="preselectDevice('تكييف')">
+        <div class="qs-img"><img src="https://images.unsplash.com/photo-1631545806609-25e7b1f2e1c0?w=400&q=80&auto=format&fit=crop" alt="تكييفات" loading="lazy"></div>
+        <div class="qs-body"><h3>تكييفات</h3><span class="qs-btn">اطلب صيانة</span></div>
+      </a>
+      <a href="#order" class="qs-card reveal reveal-delay-3" onclick="preselectDevice('بوتاجاز')">
+        <div class="qs-img"><img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=400&q=80&auto=format&fit=crop" alt="بوتاجازات" loading="lazy"></div>
+        <div class="qs-body"><h3>بوتاجازات</h3><span class="qs-btn">اطلب صيانة</span></div>
+      </a>
+      <a href="#order" class="qs-card reveal reveal-delay-4" onclick="preselectDevice('سخان')">
+        <div class="qs-img"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&q=80&auto=format&fit=crop" alt="سخانات" loading="lazy"></div>
+        <div class="qs-body"><h3>سخانات</h3><span class="qs-btn">اطلب صيانة</span></div>
+      </a>
+      <a href="#order" class="qs-card reveal reveal-delay-5" onclick="preselectDevice('جهاز آخر')">
+        <div class="qs-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80&auto=format&fit=crop" alt="أجهزة أخرى" loading="lazy"></div>
+        <div class="qs-body"><h3>أجهزة أخرى</h3><span class="qs-btn">اطلب صيانة</span></div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ================= الخدمات ================= -->
-<section id="services" style="background:#fff">
+<!-- ==================== BRANDS ==================== -->
+<section class="section brands-section" id="brands">
   <div class="container">
-    <div class="section-head">
-      <span class="section-tag">خدماتنا</span>
-      <h2>ماذا نُصلح في مركز تراست؟</h2>
-      <p>نتعامل مع جميع الأجهزة الكهربائية المنزلية، صيانة كاملة أو إصلاح أعطال بسيطة.</p>
+    <div class="divider reveal"></div>
+    <h2 class="section-title reveal">نصين <span class="accent">لكافة ماركات</span> الأجهزة المنزلية</h2>
+    <p class="section-sub reveal">فريق تراست مدرّب على صيانة جميع الماركات المعروفة في السوق المصري بأحدث الأساليب</p>
+
+    <div class="brands-grid">
+      <div class="brand-card reveal">Toshiba</div>
+      <div class="brand-card reveal reveal-delay-1">Tornado</div>
+      <div class="brand-card reveal reveal-delay-2">Fresh</div>
+      <div class="brand-card reveal reveal-delay-3">Unionaire</div>
+      <div class="brand-card reveal reveal-delay-4">Zanussi</div>
+      <div class="brand-card reveal reveal-delay-5">Beko</div>
+      <div class="brand-card reveal">LG</div>
+      <div class="brand-card reveal reveal-delay-1">Samsung</div>
+      <div class="brand-card reveal reveal-delay-2">Whirlpool</div>
+      <div class="brand-card reveal reveal-delay-3">Ariston</div>
+      <div class="brand-card reveal reveal-delay-4">Indesit</div>
+      <div class="brand-card reveal reveal-delay-5">Sharp</div>
+      <div class="brand-card reveal">White Point</div>
+      <div class="brand-card reveal reveal-delay-1">Olympic Electric</div>
+      <div class="brand-card reveal reveal-delay-2">Ideal</div>
+      <div class="brand-card reveal reveal-delay-3">Carrier</div>
+      <div class="brand-card reveal reveal-delay-4">Fagor</div>
+      <div class="brand-card reveal reveal-delay-5">Bosch</div>
+      <div class="brand-card reveal">Siemens</div>
+      <div class="brand-card reveal reveal-delay-1">Midea</div>
     </div>
+
+    <p class="brands-footer reveal">صيانة لمختلف ماركات الأجهزة المنزلية</p>
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="divider reveal"></div>
+    <h2 class="section-title reveal">خدمات <span class="accent">تراست</span></h2>
+    <p class="section-sub reveal">حلول صيانة شاملة لجميع الأجهزة المنزلية بأيدي فنيين متخصصين</p>
 
     <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🧊</div>
-        <h4>صيانة الثلاجات</h4>
-        <p>عدم التبريد، تسريب الماء، أصوات غريبة، مشاكل الفريزر والكمبروسر.</p>
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=700&q=80&auto=format&fit=crop" alt="صيانة الغسالات" loading="lazy">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="2"/><path d="M7 6h.01M11 6h.01"/></svg>
+          </div>
+        </div>
+        <div class="service-body">
+          <h3>صيانة الغسالات</h3>
+          <p>فحص وتشخيص وإصلاح جميع أعطال الغسالات الأوتوماتيك والنصف أوتوماتيك بجميع ماركاتها.</p>
+          <a href="#order" class="service-link">اطلب الخدمة <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-icon">🌀</div>
-        <h4>صيانة الغسالات</h4>
-        <p>عدم العصر، عدم التصريف، اهتزاز قوي، أعطال لوحة التحكم.</p>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=700&q=80&auto=format&fit=crop" alt="صيانة الثلاجات" loading="lazy">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M5 10h14"/><path d="M9 6h1M9 14h1"/></svg>
+          </div>
+        </div>
+        <div class="service-body">
+          <h3>صيانة الثلاجات</h3>
+          <p>إصلاح أعطال التبريد والتجميد وتغيير قطع الغيار المناسبة لجميع أنواع الثلاجات.</p>
+          <a href="#order" class="service-link">اطلب الخدمة <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-icon">🔥</div>
-        <h4>صيانة البوتاجازات</h4>
-        <p>الأفران، عيون الغاز، الشواية، مشاكل الإشعال وتنظيف الفتحات.</p>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1631545806609-25e7b1f2e1c0?w=700&q=80&auto=format&fit=crop" alt="صيانة التكييفات" loading="lazy">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="10" rx="2"/><path d="M6 18v3M12 18v3M18 18v3"/><path d="M7 9h10"/></svg>
+          </div>
+        </div>
+        <div class="service-body">
+          <h3>صيانة التكييفات</h3>
+          <p>تنظيف وشحن فريون وإصلاح أعطال التكييفات السبليت والشباك والمركزي.</p>
+          <a href="#order" class="service-link">اطلب الخدمة <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-icon">❄️</div>
-        <h4>صيانة المكيفات</h4>
-        <p>تركيب، تنظيف، شحن فريون، صيانة السبليت والشباك والمركزي.</p>
+
+      <div class="service-card reveal">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=700&q=80&auto=format&fit=crop" alt="صيانة البوتاجازات" loading="lazy">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></svg>
+          </div>
+        </div>
+        <div class="service-body">
+          <h3>صيانة البوتاجازات</h3>
+          <p>إصلاح أعطال الولاعات والأفران والشوايات وتنظيف وصيانة البوتاجازات بجميع أنواعها.</p>
+          <a href="#order" class="service-link">اطلب الخدمة <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-icon">🥶</div>
-        <h4>صيانة الفريزرات</h4>
-        <p>ضعف التجميد، تراكم الثلج، مشاكل التبريد الكهربائي.</p>
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=700&q=80&auto=format&fit=crop" alt="صيانة السخانات" loading="lazy">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="16" rx="3"/><path d="M12 6v4M12 22v-4M9 22h6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+        </div>
+        <div class="service-body">
+          <h3>صيانة السخانات</h3>
+          <p>إصلاح أعطال السخانات الكهربائية والغاز وتغيير قطع الغيار المناسبة بضمان.</p>
+          <a href="#order" class="service-link">اطلب الخدمة <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
+        </div>
       </div>
-      <div class="service-card">
-        <div class="service-icon">🍽️</div>
-        <h4>غسالات الأطباق</h4>
-        <p>عدم التنظيف الجيد، مشاكل التصريف، تسريب المياه، لوحة التحكم.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🚿</div>
-        <h4>السخانات الكهربائية</h4>
-        <p>عدم التسخين، تسريب المياه، أعطال الترموستات وعنصر التسخين.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📺</div>
-        <h4>أجهزة أخرى</h4>
-        <p>الميكروويف، النشافة، المكنسة الكهربائية، ومختلف الأجهزة المنزلية.</p>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=700&q=80&auto=format&fit=crop" alt="فحص وتشخيص" loading="lazy">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+          </div>
+        </div>
+        <div class="service-body">
+          <h3>فحص وتشخيص الأعطال</h3>
+          <p>تشخيص دقيق لأعطال الأجهزة المنزلية قبل الإصلاح لتحديد المشكلة الحقيقية.</p>
+          <a href="#order" class="service-link">اطلب الخدمة <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= معرض الصور ================= -->
-<section id="gallery">
+<!-- ==================== WHY TRUST ==================== -->
+<section class="section why-section" id="why">
   <div class="container">
-    <div class="section-head">
-      <span class="section-tag">أعمالنا</span>
-      <h2>معرض صور الأجهزة والأعمال</h2>
-      <p>صور من أعمال الصيانة التي قام بها مركز تراست (سيتم تحديث الصور تباعاً).</p>
-    </div>
+    <div class="divider reveal"></div>
+    <h2 class="section-title reveal">ليه تختار <span class="accent">تراست؟</span></h2>
+    <p class="section-sub reveal">لأننا بنقدملك خدمة صيانة تستحق ثقتك</p>
 
-    <!-- ✅ يتم توليد البطاقات تلقائياً من مصفوفة IMAGES في الجافاسكربت بالأسفل -->
-    <div class="gallery-grid" id="galleryGrid"></div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+        <h3>فنيون متخصصون</h3>
+        <p>فريق من الفنيين المدربين على صيانة جميع أنواع الأجهزة المنزلية بأحدث التقنيات.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+        <h3>تشخيص العطل قبل الإصلاح</h3>
+        <p>نحدد المشكلة بدقة قبل البدء في أي عملية إصلاح لضمان الحل الصحيح من أول مرة.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h3>قطع غيار مناسبة</h3>
+        <p>نستخدم قطع غيار أصلية ومناسبة لضمان كفاءة الجهاز وطول عمره الافتراضي.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>خدمة صيانة منزلية</h3>
+        <p>نوفر خدمة الصيانة في منزلك لتوفير وقتك ومجهودك دون الحاجة لنقل الجهاز.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-4">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>تغطية مناطق الإسكندرية</h3>
+        <p>نخدم جميع مناطق الإسكندرية بفريق متنقل جاهز للوصول إليك في أسرع وقت.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-5">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>ضمان على أعمال الصيانة</h3>
+        <p>نضمن لك جودة أعمال الصيانة التي نقوم بها، مع متابعة كاملة من مركز تراست.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ================= نموذج طلب الصيانة ================= -->
-<section class="order-section" id="order">
+<!-- ==================== GALLERY ==================== -->
+<section class="section gallery-section" id="gallery">
   <div class="container">
-    <div class="section-head">
-      <span class="section-tag">طلب صيانة</span>
-      <h2>سجّل مشكلتك وسنتواصل معك</h2>
-      <p>املأ البيانات التالية، وعند الضغط على زر الإرسال سيتم فتح واتساب مع رسالة جاهزة تحتوي كل التفاصيل.</p>
+    <div class="divider reveal"></div>
+    <h2 class="section-title reveal">شغل <span class="accent">تراست</span> على أرض الواقع</h2>
+    <p class="section-sub reveal">نماذج من أعمال الصيانة التي قام بها فريق تراست — اضغط على الصورة للتكبير</p>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <div class="gallery-pair">
+          <div class="gallery-half before">
+            <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=500&q=80&auto=format&fit=crop" alt="غسالة قبل الصيانة" loading="lazy">
+            <span class="gallery-badge before">قبل</span>
+          </div>
+          <div class="gallery-half after">
+            <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=500&q=80&auto=format&fit=crop&sat=20" alt="غسالة بعد الصيانة" loading="lazy">
+            <span class="gallery-badge after">بعد</span>
+          </div>
+        </div>
+        <div class="gallery-caption"><h4>غسالة أوتوماتيك</h4><span>تم الإصلاح ✓</span></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" onclick="openLightbox(this)">
+        <div class="gallery-pair">
+          <div class="gallery-half before">
+            <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=500&q=80&auto=format&fit=crop" alt="ثلاجة قبل الصيانة" loading="lazy">
+            <span class="gallery-badge before">قبل</span>
+          </div>
+          <div class="gallery-half after">
+            <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=500&q=80&auto=format&fit=crop&sat=20" alt="ثلاجة بعد الصيانة" loading="lazy">
+            <span class="gallery-badge after">بعد</span>
+          </div>
+        </div>
+        <div class="gallery-caption"><h4>ثلاجة نوفروست</h4><span>تم الإصلاح ✓</span></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" onclick="openLightbox(this)">
+        <div class="gallery-pair">
+          <div class="gallery-half before">
+            <img src="https://images.unsplash.com/photo-1631545806609-25e7b1f2e1c0?w=500&q=80&auto=format&fit=crop" alt="تكييف قبل الصيانة" loading="lazy">
+            <span class="gallery-badge before">قبل</span>
+          </div>
+          <div class="gallery-half after">
+            <img src="https://images.unsplash.com/photo-1631545806609-25e7b1f2e1c0?w=500&q=80&auto=format&fit=crop&sat=20" alt="تكييف بعد الصيانة" loading="lazy">
+            <span class="gallery-badge after">بعد</span>
+          </div>
+        </div>
+        <div class="gallery-caption"><h4>تكييف سبليت</h4><span>تم الإصلاح ✓</span></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal" onclick="openLightbox(this)">
+        <div class="gallery-pair">
+          <div class="gallery-half before">
+            <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=500&q=80&auto=format&fit=crop" alt="بوتاجاز قبل الصيانة" loading="lazy">
+            <span class="gallery-badge before">قبل</span>
+          </div>
+          <div class="gallery-half after">
+            <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=500&q=80&auto=format&fit=crop&sat=20" alt="بوتاجاز بعد الصيانة" loading="lazy">
+            <span class="gallery-badge after">بعد</span>
+          </div>
+        </div>
+        <div class="gallery-caption"><h4>بوتاجاز 5 عيون</h4><span>تم الإصلاح ✓</span></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" onclick="openLightbox(this)">
+        <div class="gallery-pair">
+          <div class="gallery-half before">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500&q=80&auto=format&fit=crop" alt="سخان قبل الصيانة" loading="lazy">
+            <span class="gallery-badge before">قبل</span>
+          </div>
+          <div class="gallery-half after">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500&q=80&auto=format&fit=crop&sat=20" alt="سخان بعد الصيانة" loading="lazy">
+            <span class="gallery-badge after">بعد</span>
+          </div>
+        </div>
+        <div class="gallery-caption"><h4>سخان غاز</h4><span>تم الإصلاح ✓</span></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" onclick="openLightbox(this)">
+        <div class="gallery-pair">
+          <div class="gallery-half before">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500&q=80&auto=format&fit=crop" alt="جهاز منزلي قبل الصيانة" loading="lazy">
+            <span class="gallery-badge before">قبل</span>
+          </div>
+          <div class="gallery-half after">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500&q=80&auto=format&fit=crop&sat=20" alt="جهاز منزلي بعد الصيانة" loading="lazy">
+            <span class="gallery-badge after">بعد</span>
+          </div>
+        </div>
+        <div class="gallery-caption"><h4>غسالة أطباق</h4><span>تم الإصلاح ✓</span></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></div>
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="form-wrap">
-      <form id="orderForm" novalidate>
-        <div class="form-grid">
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+  <img id="lightboxImg" src="" alt="عرض الصورة">
+</div>
 
-          <!-- نوع الجهاز -->
-          <div class="field" id="f-device">
-            <label for="device">نوع الجهاز <span class="req">*</span></label>
-            <select id="device" name="device" required>
-              <option value="">— اختر نوع الجهاز —</option>
-              <option>ثلاجة</option>
-              <option>غسالة</option>
-              <option>بوتاجاز</option>
-              <option>مكيف</option>
-              <option>فريزر</option>
-              <option>غسالة أطباق</option>
-              <option>سخان مياه</option>
-              <option>ميكروويف</option>
-              <option>فرن كهربائي</option>
-              <option>نشافة ملابس</option>
-              <option>جهاز آخر</option>
-            </select>
-            <span class="error-msg">الرجاء اختيار نوع الجهاز</span>
-          </div>
+<!-- ==================== ORDER FORM ==================== -->
+<section class="section order-section" id="order">
+  <div class="container">
+    <div class="divider reveal"></div>
+    <h2 class="section-title reveal">اطلب <span class="accent">صيانة الآن</span></h2>
+    <p class="section-sub reveal">املأ البيانات وسيتم تحويلك مباشرة إلى واتساب تراست لتأكيد الطلب</p>
 
-          <!-- الماركة -->
-          <div class="field">
-            <label for="brand">الماركة / الموديل <span class="hint">(اختياري)</span></label>
-            <input type="text" id="brand" name="brand" placeholder="مثال: توشيبا / سامسونج / LG">
-          </div>
-
-          <!-- وصف المشكلة -->
-          <div class="field full" id="f-problem">
-            <label for="problem">وصف المشكلة <span class="req">*</span></label>
-            <textarea id="problem" name="problem" required
-              placeholder="اكتب وصفاً دقيقاً للمشكلة... مثال: الثلاجة لا تبرد في القسم السفلي وتصدر صوتاً قوياً، والجهاز يعمل منذ 3 سنوات."></textarea>
-            <span class="error-msg">الرجاء كتابة وصف المشكلة</span>
-          </div>
-
-          <!-- الاسم -->
-          <div class="field" id="f-name">
-            <label for="name">الاسم الكامل <span class="req">*</span></label>
-            <input type="text" id="name" name="name" placeholder="اكتب اسمك" required>
-            <span class="error-msg">الرجاء كتابة الاسم</span>
-          </div>
-
-          <!-- الجوال -->
-          <div class="field" id="f-phone">
-            <label for="phone">رقم الجوال / الواتساب <span class="req">*</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="مثال: 01000000000" required>
-            <span class="error-msg">الرجاء كتابة رقم جوال صحيح</span>
-          </div>
-
-          <!-- المنطقة في الإسكندرية -->
-          <div class="field">
-            <label for="address">المنطقة / العنوان في الإسكندرية <span class="hint">(اختياري)</span></label>
-            <input type="text" id="address" name="address" placeholder="مثال: سموحة - العجمي - سيدي بشر">
-          </div>
-
-          <!-- وقت التواصل -->
-          <div class="field">
-            <label for="time">وقت التواصل المفضل <span class="hint">(اختياري)</span></label>
-            <select id="time" name="time">
-              <option value="">— اختر الوقت —</option>
-              <option>صباحاً (8 ص - 12 م)</option>
-              <option>بعد الظهر (12 م - 4 م)</option>
-              <option>مساءً (4 م - 9 م)</option>
-              <option>أي وقت مناسب</option>
-            </select>
-          </div>
-
-          <!-- مكان الصيانة -->
-          <div class="field full">
-            <label for="place">مكان الصيانة <span class="hint">(اختياري)</span></label>
-            <select id="place" name="place">
-              <option value="">— اختر —</option>
-              <option>صيانة في الموقع (عند العميل داخل الإسكندرية)</option>
-              <option>نقل الجهاز إلى المركز</option>
-              <option>لا أعرف / أحتاج استشارة</option>
-            </select>
-          </div>
-
+    <div class="order-wrapper reveal">
+      <form class="order-form" id="orderForm" onsubmit="submitOrder(event)">
+        <div class="form-group">
+          <label for="name">اسم العميل <span class="req">*</span></label>
+          <input type="text" id="name" name="name" placeholder="اكتب اسمك الكامل" required>
         </div>
 
-        <div class="form-actions">
-          <button type="submit" class="btn btn-wa" id="sendBtn">
-            <span style="font-size:20px">📲</span> إرسال الطلب عبر واتساب
+        <div class="form-group">
+          <label for="phone">رقم الموبايل <span class="req">*</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="01xxxxxxxxx" pattern="01[0-9]{9}" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone2">رقم تواصل بديل (اختياري)</label>
+          <input type="tel" id="phone2" name="phone2" placeholder="01xxxxxxxxx" pattern="01[0-9]{9}">
+        </div>
+
+        <div class="form-group">
+          <label for="area">المنطقة داخل الإسكندرية <span class="req">*</span></label>
+          <select id="area" name="area" required>
+            <option value="">اختر المنطقة</option>
+            <option>سيدي بشر</option>
+            <option>العصافرة</option>
+            <option>المندرة</option>
+            <option>المنتزه</option>
+            <option>المعمورة</option>
+            <option>أبو قير</option>
+            <option>محرم بك</option>
+            <option>العجمي</option>
+            <option>الدخيلة</option>
+            <option>البيطاش</option>
+            <option>الهانوفيل</option>
+            <option>كرموز</option>
+            <option>السيوف</option>
+            <option>الرمل</option>
+            <option>سموحة</option>
+            <option>سيدي جابر</option>
+            <option>الشاطبي</option>
+            <option>العطارين</option>
+            <option>المنشية</option>
+            <option>بحري</option>
+            <option>أخرى</option>
+          </select>
+        </div>
+
+        <div class="form-group full">
+          <label for="address">العنوان بالتفصيل <span class="req">*</span></label>
+          <input type="text" id="address" name="address" placeholder="مثال: محمد نجيب - سيدي بشر - شارع..." required>
+        </div>
+
+        <div class="form-group">
+          <label for="device">نوع الجهاز <span class="req">*</span></label>
+          <select id="device" name="device" required>
+            <option value="">اختر نوع الجهاز</option>
+            <option>غسالة</option>
+            <option>ثلاجة</option>
+            <option>تكييف</option>
+            <option>بوتاجاز</option>
+            <option>سخان</option>
+            <option>غسالة أطباق</option>
+            <option>ميكروويف</option>
+            <option>جهاز آخر</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="brand">الماركة</label>
+          <input type="text" id="brand" name="brand" placeholder="مثال: توشيبا، LG، سامسونج...">
+        </div>
+
+        <div class="form-group full">
+          <label for="problem">وصف المشكلة <span class="req">*</span></label>
+          <textarea id="problem" name="problem" placeholder="اشرح لنا المشكلة بالتفصيل..." required></textarea>
+        </div>
+
+        <div class="form-group full">
+          <label>موعد الصيانة المطلوب <span class="req">*</span></label>
+          <div class="date-quick">
+            <button type="button" class="date-btn" onclick="setQuickDate(0,this)">اليوم</button>
+            <button type="button" class="date-btn" onclick="setQuickDate(1,this)">غدًا</button>
+            <button type="button" class="date-btn" onclick="setQuickDate(2,this)">بعد يومين</button>
+          </div>
+          <input type="date" id="date" name="date" required min="">
+        </div>
+
+        <div class="form-group full">
+          <label>الفترة المناسبة <span class="req">*</span></label>
+          <input type="hidden" id="timePeriod" name="timePeriod" required>
+          <div class="time-picker">
+            <button type="button" class="time-opt" onclick="selectTime('صباحًا',this)">صباحًا</button>
+            <button type="button" class="time-opt" onclick="selectTime('ظهرًا',this)">ظهرًا</button>
+            <button type="button" class="time-opt" onclick="selectTime('مساءً',this)">مساءً</button>
+          </div>
+        </div>
+
+        <div class="order-submit">
+          <button type="submit" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            تأكيد طلب الصيانة
           </button>
         </div>
-
-        <p class="form-note">
-          🔒 بياناتك تُرسل مباشرة إلى واتساب مركز تراست (01115666443) ولا يتم تخزينها في الموقع.
-        </p>
       </form>
-    </div>
-  </div>
-</section>
 
-<!-- ================= تواصل معنا ================= -->
-<section id="contact" style="background:#fff">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-tag">تواصل معنا</span>
-      <h2>نحن في خدمتك في الإسكندرية</h2>
-      <p>يمكنك التواصل معنا مباشرة عبر الواتساب أو الاتصال، ونرد عليك في أسرع وقت.</p>
-    </div>
-
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="ico">📞</div>
-        <h4>اتصل بنا</h4>
-        <a class="phone-display" href="#">—</a>
-      </div>
-      <div class="contact-card">
-        <div class="ico">💬</div>
-        <h4>واتساب</h4>
-        <a class="wa-link" href="#" target="_blank" rel="noopener">اضغط للمحادثة</a>
-      </div>
-      <div class="contact-card">
-        <div class="ico">🕒</div>
-        <h4>أوقات العمل</h4>
-        <p style="direction:rtl">يومياً من 8 صباحاً حتى 10 مساءً</p>
-      </div>
-      <div class="contact-card">
-        <div class="ico">📍</div>
-        <h4>الموقع</h4>
-        <p style="direction:rtl">الإسكندرية - مصر</p>
+      <!-- SUCCESS STATE -->
+      <div class="order-success" id="orderSuccess">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>تم تجهيز طلب الصيانة</h3>
+        <p>سيتم التواصل معك من مركز تراست لتأكيد الموعد.<br>يمكنك أيضًا التواصل معنا مباشرة الآن.</p>
+        <div class="success-actions">
+          <a href="https://wa.me/201156661812" target="_blank" class="btn btn-wa">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            تواصل مع تراست عبر واتساب
+          </a>
+          <a href="tel:01156661812" class="btn btn-outline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            اتصال بالمركز
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= الفوتر ================= -->
-<footer>
+<!-- ==================== CTA BANNER ==================== -->
+<section class="cta-banner">
   <div class="container">
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand">
-          <img src="https://i.postimg.cc/vHbYGnf2/logo.jpg" alt="مركز تراست">
+    <div class="cta-inner">
+      <div class="cta-text">
+        <h2>عندك عطل؟ متستناش!</h2>
+        <p>كلم تراست الآن وهنساعدك تحل المشكلة بسرعة واحترافية</p>
+      </div>
+      <div class="cta-actions">
+        <a href="tel:01156661812" class="btn btn-gold">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          01156661812
+        </a>
+        <a href="#order" class="btn btn-outline" style="border-color:rgba(255,255,255,.6)">
+          اطلب صيانة
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== LOCATION ==================== -->
+<section class="section location-section" id="location">
+  <div class="container">
+    <div class="divider reveal"></div>
+    <h2 class="section-title reveal">تراست في <span class="accent">الإسكندرية</span></h2>
+    <p class="section-sub reveal">نخدم جميع مناطق الإسكندرية — مقرنا الرئيسي في سيدي بشر</p>
+
+    <div class="location-wrapper">
+      <div class="location-info reveal">
+        <div class="location-item">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <div>
-            <strong>مركز تراست</strong>
-            <small>لصيانة الأجهزة الكهربائية - الإسكندرية</small>
+            <h4>العنوان</h4>
+            <p>محمد نجيب - سيدي بشر - الإسكندرية</p>
           </div>
         </div>
-        <p style="font-size:14.5px">
-          مركز متخصص في صيانة وإصلاح جميع الأجهزة الكهربائية المنزلية في الإسكندرية بجودة عالية وضمان على الخدمة.
-        </p>
+        <div class="location-item">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <h4>أرقام التواصل</h4>
+            <a href="tel:01156661812">01156661812</a><br>
+            <a href="tel:01124997077">01124997077</a>
+          </div>
+        </div>
+        <div class="location-item">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+          <div>
+            <h4>واتساب</h4>
+            <a href="https://wa.me/201156661812" target="_blank">تواصل عبر واتساب</a>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <h5>روابط سريعة</h5>
+      <div class="location-map reveal reveal-delay-1">
+        <iframe
+          src="https://www.google.com/maps?q=محمد+نجيب+سيدي+بشر+الإسكندرية&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="موقع مركز تراست">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 60 60" width="44" height="44">
+              <defs>
+                <linearGradient id="footGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#d92030"/>
+                  <stop offset="50%" stop-color="#f0b400"/>
+                  <stop offset="100%" stop-color="#b71c2b"/>
+                </linearGradient>
+              </defs>
+              <path d="M8 42 Q8 18 30 18 Q52 18 52 42" stroke="url(#footGrad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+              <path d="M16 42 Q16 28 30 28 Q44 28 44 42" stroke="url(#footGrad)" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7"/>
+              <path d="M30 18 L30 8 M30 8 L24 14 M30 8 L36 14" stroke="#f0b400" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="30" cy="42" r="4" fill="#d92030"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-trust">
+              <span class="t">T</span><span class="r">R</span><span class="u">U</span><span class="s">S</span><span class="t2">T</span>
+            </span>
+            <span class="logo-sub">مركز تراست</span>
+          </div>
+        </a>
+        <p>مركز تراست لصيانة الأجهزة المنزلية في الإسكندرية. فنيون متخصصون، تشخيص دقيق، وضمان على أعمال الصيانة.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/201156661812" target="_blank" aria-label="واتساب">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="tel:01156661812" aria-label="اتصال">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
         <ul>
-          <li><a href="#home">الرئيسية</a></li>
-          <li><a href="#about">من نحن</a></li>
-          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#hero">الرئيسية</a></li>
+          <li><a href="#services">الخدمات</a></li>
+          <li><a href="#brands">الماركات</a></li>
           <li><a href="#gallery">أعمالنا</a></li>
           <li><a href="#order">طلب صيانة</a></li>
+          <li><a href="#location">اتصل بنا</a></li>
         </ul>
       </div>
 
-      <div>
-        <h5>تواصل معنا</h5>
+      <div class="footer-col">
+        <h4>خدماتنا</h4>
         <ul>
-          <li><a class="wa-link" href="#" target="_blank" rel="noopener">💬 واتساب</a></li>
-          <li><a class="phone-display" href="#">📞 —</a></li>
-          <li><span>📍 الإسكندرية - مصر</span></li>
-          <li><span>🕒 يومياً 8ص - 10م</span></li>
+          <li><a href="#order">صيانة غسالات</a></li>
+          <li><a href="#order">صيانة ثلاجات</a></li>
+          <li><a href="#order">صيانة تكييفات</a></li>
+          <li><a href="#order">صيانة بوتاجازات</a></li>
+          <li><a href="#order">صيانة سخانات</a></li>
+          <li><a href="#order">فحص وتشخيص</a></li>
         </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>تواصل معنا</h4>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:01156661812">01156661812</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:01124997077">01124997077</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span style="color:var(--gray);font-size:.92rem">محمد نجيب - سيدي بشر - الإسكندرية</span>
+        </div>
+        <a href="https://wa.me/201156661812?text=مرحباً%20مركز%20تراست،%20أريد%20الاستفسار%20عن%20خدمات%20الصيانة" target="_blank" class="footer-wa-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          تواصل عبر واتساب
+        </a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      © <span id="year"></span> مركز تراست لصيانة الأجهزة الكهربائية - الإسكندرية — جميع الحقوق محفوظة.
+      <p>© 2025 <span class="gold">TRUST مركز تراست</span> — جميع الحقوق محفوظة | صيانة الأجهزة المنزلية في الإسكندرية</p>
     </div>
   </div>
 </footer>
 
-<!-- زر واتساب عائم -->
-<a class="float-wa wa-link" href="#" target="_blank" rel="noopener" aria-label="واتساب">💬</a>
-
-<!-- تنبيه -->
-<div class="toast" id="toast">تم تجهيز الرسالة، جاري فتح واتساب...</div>
-
-<!-- لايت بوكس -->
-<div class="lightbox" id="lightbox">
-  <button class="close" id="closeLb">&times;</button>
-  <img src="" alt="صورة" id="lbImg">
+<!-- ==================== MOBILE STICKY BAR ==================== -->
+<div class="mobile-bar">
+  <a href="tel:01156661812" class="mb-call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    اتصال
+  </a>
+  <a href="https://wa.me/201156661812?text=مرحباً%20مركز%20تراست" target="_blank" class="mb-wa">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    واتساب
+  </a>
+  <a href="#order" class="mb-order">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+    اطلب صيانة
+  </a>
 </div>
 
 <script>
-/* ============================================================
-   1) إعدادات مهمة — عدّل القيم هنا فقط
-   ============================================================ */
-
-/* 📱 رقم الواتساب بالصيغة الدولية بدون + وبدون مسافات
-   الرقم المصري: 00201115666443  →  201115666443              */
-const WHATSAPP_NUMBER = "201115666443";   // ← رقم مركز تراست بالإسكندرية
-
-/* 🖼️ روابط صور المعرض — ضع رابط كل صورة بين علامتي التنصيص
-   اتركها فارغة "" وسيظهر مكان مخصص مرقّم بالرقم المطلوب.
-   مثال:  1: "https://example.com/fridge.jpg",               */
-const IMAGES = {
-  1: "",   // ← ضع هنا رابط الصورة رقم 1
-  2: "",   // ← ضع هنا رابط الصورة رقم 2
-  3: "",   // ← ضع هنا رابط الصورة رقم 3
-  4: "",   // ← ضع هنا رابط الصورة رقم 4
-  5: "",   // ← ضع هنا رابط الصورة رقم 5
-  6: "",   // ← ضع هنا رابط الصورة رقم 6
-  7: "",   // ← ضع هنا رابط الصورة رقم 7
-  8: "",   // ← ضع هنا رابط الصورة رقم 8
-  9: ""    // ← ضع هنا رابط الصورة رقم 9
+/* ==================== CONFIG ==================== */
+const CONFIG = {
+  whatsapp: '201156661812',
+  phone1: '01156661812',
+  phone2: '01124997077'
 };
 
-/* ============================================================
-   2) توليد معرض الصور تلقائياً
-   ============================================================ */
-(function buildGallery(){
-  const grid = document.getElementById('galleryGrid');
-  const total = Object.keys(IMAGES).length;
-
-  for (let i = 1; i <= total; i++) {
-    const url = (IMAGES[i] || "").trim();
-    const item = document.createElement('div');
-    item.className = 'gallery-item';
-
-    if (url) {
-      item.innerHTML =
-        '<span class="num">' + i + '</span>' +
-        '<img src="' + url + '" alt="صورة رقم ' + i + '" loading="lazy">';
-      item.querySelector('img').addEventListener('click', () => openLightbox(url));
-    } else {
-      item.innerHTML =
-        '<span class="num">' + i + '</span>' +
-        '<div class="ph"><span>صورة رقم ' + i + '</span><small>سيتم إضافة الصورة قريباً</small></div>';
-    }
-    grid.appendChild(item);
-  }
-})();
-
-/* ============================================================
-   3) اللايت بوكس (تكبير الصورة)
-   ============================================================ */
-const lightbox = document.getElementById('lightbox');
-const lbImg    = document.getElementById('lbImg');
-
-function openLightbox(src){
-  lbImg.src = src;
-  lightbox.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeLightbox(){
-  lightbox.classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.getElementById('closeLb').addEventListener('click', closeLightbox);
-lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-
-/* ============================================================
-   4) تعبئة روابط الواتساب والهاتف تلقائياً
-   ============================================================ */
-(function fillContacts(){
-  const waURL = "https://wa.me/" + WHATSAPP_NUMBER;
-  document.querySelectorAll('.wa-link').forEach(a => a.href = waURL);
-
-  /* عرض الرقم بصيغة مفهومة: 0020 1115666443 */
-  const phonePretty = "+20 111 566 6443";
-  document.querySelectorAll('.phone-display').forEach(a => {
-    a.textContent = phonePretty;
-    a.href = "tel:+" + WHATSAPP_NUMBER;
-  });
-
-  document.getElementById('year').textContent = new Date().getFullYear();
-})();
-
-/* ============================================================
-   5) قائمة الجوال
-   ============================================================ */
-const menuBtn = document.getElementById('menuBtn');
-const nav     = document.getElementById('nav');
-menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
-nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
-
-/* ============================================================
-   6) إرسال النموذج عبر واتساب
-   ============================================================ */
-const form = document.getElementById('orderForm');
-const toast = document.getElementById('toast');
-
-function showToast(msg){
-  toast.textContent = msg;
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 3500);
-}
-
-function setInvalid(fieldId, isInvalid){
-  document.getElementById(fieldId).classList.toggle('invalid', isInvalid);
-}
-
-/* إزالة التنبيه عند الكتابة */
-['device','problem','name','phone'].forEach(id => {
-  const el = document.getElementById(id);
-  el.addEventListener('input', () => el.closest('.field').classList.remove('invalid'));
-  el.addEventListener('change', () => el.closest('.field').classList.remove('invalid'));
+/* ==================== HEADER SCROLL ==================== */
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-form.addEventListener('submit', function(e){
+/* ==================== MOBILE MENU ==================== */
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+function closeMenu(){
+  burger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ==================== REVEAL ON SCROLL ==================== */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ==================== ACTIVE NAV ==================== */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(sec => {
+    if(window.scrollY >= sec.offsetTop - 120) current = sec.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+});
+
+/* ==================== LIGHTBOX ==================== */
+function openLightbox(el){
+  const img = el.querySelector('.gallery-half.after img') || el.querySelector('img');
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  lbImg.src = img.src;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e){
+  if(e.target.id === 'lightbox' || e.target.classList.contains('lightbox-close')){
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape'){
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+
+/* ==================== DATE ==================== */
+const dateInput = document.getElementById('date');
+const today = new Date();
+const pad = n => String(n).padStart(2,'0');
+const formatDate = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+dateInput.min = formatDate(today);
+
+function setQuickDate(offset, btn){
+  const d = new Date();
+  d.setDate(d.getDate() + offset);
+  dateInput.value = formatDate(d);
+  document.querySelectorAll('.date-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+/* ==================== TIME PERIOD ==================== */
+function selectTime(val, btn){
+  document.getElementById('timePeriod').value = val;
+  document.querySelectorAll('.time-opt').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+/* ==================== PRESELECT DEVICE ==================== */
+function preselectDevice(device){
+  setTimeout(() => {
+    const sel = document.getElementById('device');
+    for(let opt of sel.options){
+      if(opt.text.includes(device) || device.includes(opt.text)){
+        sel.value = opt.value || opt.text;
+        break;
+      }
+    }
+  }, 600);
+}
+
+/* ==================== SUBMIT ORDER ==================== */
+function submitOrder(e){
   e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  const timePeriod = document.getElementById('timePeriod').value;
 
-  const device  = document.getElementById('device').value.trim();
-  const brand   = document.getElementById('brand').value.trim();
-  const problem = document.getElementById('problem').value.trim();
-  const name    = document.getElementById('name').value.trim();
-  const phone   = document.getElementById('phone').value.trim();
-  const address = document.getElementById('address').value.trim();
-  const time    = document.getElementById('time').value.trim();
-  const place   = document.getElementById('place').value.trim();
-
-  /* التحقق */
-  let ok = true;
-
-  if (!device){ setInvalid('f-device', true); ok = false; } else setInvalid('f-device', false);
-  if (!problem || problem.length < 5){ setInvalid('f-problem', true); ok = false; } else setInvalid('f-problem', false);
-  if (!name){ setInvalid('f-name', true); ok = false; } else setInvalid('f-name', false);
-
-  const phoneDigits = phone.replace(/[^0-9]/g, '');
-  if (phoneDigits.length < 8){ setInvalid('f-phone', true); ok = false; } else setInvalid('f-phone', false);
-
-  if (!ok){
-    const firstErr = document.querySelector('.field.invalid');
-    if (firstErr) firstErr.scrollIntoView({behavior:'smooth', block:'center'});
-    showToast('⚠️ الرجاء إكمال الحقول المطلوبة');
+  if(!timePeriod){
+    alert('من فضلك اختر الفترة المناسبة للصيانة');
     return;
   }
 
-  /* تجهيز الرسالة */
-  const line = '━━━━━━━━━━━━━━━━━━';
-  let msg = '';
-  msg += '*🔧 طلب صيانة جديد — مركز تراست (الإسكندرية)*\n';
-  msg += line + '\n';
-  msg += '👤 *الاسم:* ' + name + '\n';
-  msg += '📱 *رقم الجوال:* ' + phone + '\n';
-  if (address) msg += '📍 *المنطقة/العنوان:* ' + address + ' - الإسكندرية\n';
-  msg += line + '\n';
-  msg += '🔌 *نوع الجهاز:* ' + device + '\n';
-  if (brand)   msg += '🏷️ *الماركة/الموديل:* ' + brand + '\n';
-  if (place)   msg += '🚚 *مكان الصيانة:* ' + place + '\n';
-  msg += '\n📝 *وصف المشكلة:*\n' + problem + '\n';
-  msg += line + '\n';
-  if (time) msg += '🕒 *وقت التواصل المفضل:* ' + time + '\n';
-  msg += '🌐 تم الإرسال من موقع مركز تراست - الإسكندرية';
+  const dateVal = data.get('date');
+  const dateObj = dateVal ? new Date(dateVal + 'T12:00:00') : null;
+  const dateFormatted = dateObj ? dateObj.toLocaleDateString('ar-EG', { weekday:'long', year:'numeric', month:'long', day:'numeric' }) : 'غير محدد';
 
-  /* فتح واتساب */
-  const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(msg);
+  const msg = `🔧 *طلب صيانة جديد - مركز تراست* 🔧
+
+━━━━━━━━━━━━━━━━━━
+👤 *اسم العميل:* ${data.get('name')}
+📱 *رقم الموبايل:* ${data.get('phone')}
+📞 *رقم بديل:* ${data.get('phone2') || 'لا يوجد'}
+📍 *العنوان:* ${data.get('address')}
+🗺️ *المنطقة:* ${data.get('area')}
+━━━━━━━━━━━━━━━━━━
+🔌 *نوع الجهاز:* ${data.get('device')}
+🏷️ *الماركة:* ${data.get('brand') || 'غير محددة'}
+📝 *المشكلة:* ${data.get('problem')}
+━━━━━━━━━━━━━━━━━━
+📅 *التاريخ المطلوب:* ${dateFormatted}
+⏰ *الفترة المناسبة:* ${timePeriod}
+━━━━━━━━━━━━━━━━━━
+
+_تم إرسال الطلب من موقع TRUST_`;
+
+  const url = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+
+  // Open WhatsApp
   window.open(url, '_blank');
 
-  showToast('✅ تم تجهيز طلبك، أكمل الإرسال في واتساب');
-  form.reset();
+  // Show success
+  form.style.display = 'none';
+  document.getElementById('orderSuccess').classList.add('show');
+  document.getElementById('orderSuccess').scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+/* ==================== SMOOTH SCROLL FOR ANCHORS ==================== */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if(href.length > 1){
+      const target = document.querySelector(href);
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({behavior:'smooth', block:'start'});
+        closeMenu();
+      }
+    }
+  });
 });
 </script>
+
 </body>
 </html>
