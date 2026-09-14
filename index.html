@@ -1262,4 +1262,1361 @@
         .form-success {
             display: none;
             background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
-            border: 2px solid #4
+            border: 2px solid #4caf50;
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 0.6s ease;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        .form-success .success-icon {
+            font-size: 4rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .form-success h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #2e7d32;
+            margin-bottom: 12px;
+        }
+
+        .form-success p {
+            font-size: 1.1rem;
+            color: #388e3c;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .form-success .success-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .request-form-wrap {
+                padding: 24px 18px;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .gallery-item {
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 1;
+            background: var(--gray);
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.12);
+        }
+
+        .gallery-item .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(to top, rgba(16, 42, 67, 0.85), transparent);
+            padding: 20px 14px 14px;
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 600;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-row: span 2;
+            aspect-ratio: auto;
+        }
+
+        .gallery-item:nth-child(6) {
+            grid-row: span 2;
+            aspect-ratio: auto;
+        }
+
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .gallery-item:nth-child(1),
+            .gallery-item:nth-child(6) {
+                grid-row: span 1;
+                aspect-ratio: 1;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+        }
+
+        /* ===== MAP / LOCATION ===== */
+        .location-section {
+            background: var(--white);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .location-info h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 16px;
+        }
+
+        .location-info .address {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .location-info .address .icon {
+            font-size: 1.4rem;
+        }
+
+        .location-phones {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .location-phones a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--navy);
+            direction: ltr;
+            justify-content: flex-start;
+        }
+
+        .location-phones a:hover {
+            color: var(--red);
+        }
+
+        .location-phones .phone-icon {
+            font-size: 1.2rem;
+        }
+
+        .map-wrap {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 400px;
+            background: var(--gray);
+        }
+
+        .map-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+            .map-wrap {
+                height: 280px;
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 70px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(to left, var(--red), var(--gold), var(--red));
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            padding-bottom: 50px;
+        }
+
+        .footer-brand .trust-logo {
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand .footer-tagline {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .footer h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--white);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+            padding-right: 6px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            direction: ltr;
+            justify-content: flex-start;
+        }
+
+        .footer-contact-item a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-contact-item a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom .footer-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #25D366;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom .footer-whatsapp:hover {
+            color: #1da851;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* ===== BOTTOM STICKY BAR (MOBILE) ===== */
+        .bottom-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: var(--white);
+            box-shadow: 0 -4px 20px rgba(16, 42, 67, 0.12);
+            z-index: 998;
+            padding: 8px 12px;
+            padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+            border-top: 1px solid rgba(16, 42, 67, 0.06);
+        }
+
+        .bottom-bar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 6px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .bottom-bar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            padding: 6px 12px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--text-medium);
+            transition: var(--transition);
+            flex: 1;
+            text-align: center;
+            min-width: 0;
+        }
+
+        .bottom-bar-item .bar-icon {
+            font-size: 1.3rem;
+            line-height: 1;
+        }
+
+        .bottom-bar-item:hover {
+            background: rgba(16, 42, 67, 0.05);
+            color: var(--navy);
+        }
+
+        .bottom-bar-item.bar-primary {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .bottom-bar-item.bar-primary:hover {
+            background: var(--red-dark);
+            color: var(--white);
+        }
+
+        .bottom-bar-item.bar-whatsapp {
+            background: #25D366;
+            color: var(--white);
+        }
+
+        .bottom-bar-item.bar-whatsapp:hover {
+            background: #1da851;
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .bottom-bar {
+                display: block;
+            }
+            body {
+                padding-bottom: 76px;
+            }
+        }
+
+        /* ===== WHATSAPP FLOAT (DESKTOP) ===== */
+        .whatsapp-float {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            z-index: 997;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            color: var(--white);
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+            transition: var(--transition);
+            animation: pulseGold 2.5s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.55);
+        }
+
+        @media (min-width: 769px) {
+            .whatsapp-float {
+                display: flex;
+            }
+        }
+
+        /* ===== ACCESSIBILITY & UTILS ===== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        ::selection {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* ===== LIGHTBOX ===== */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(16, 42, 67, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            cursor: zoom-out;
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: var(--white);
+            font-size: 2.5rem;
+            cursor: pointer;
+            line-height: 1;
+            transition: var(--transition);
+        }
+
+        .lightbox-close:hover {
+            color: var(--gold);
+            transform: rotate(90deg);
+        }
+
+        /* ===== RESPONSIVE ADDITIONS ===== */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .trust-logo {
+                font-size: 1.4rem;
+            }
+            .trust-logo-lg {
+                font-size: 2.5rem;
+            }
+            .trust-logo-xl {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#" class="header-logo trust-logo trust-logo-sm" aria-label="TRUST - الرئيسية">
+                <span class="t1">T</span><span class="r1">R</span><span class="u1">U</span><span class="s1">S</span><span class="t2">T</span>
+            </a>
+
+            <nav>
+                <ul class="header-nav">
+                    <li><a href="#hero">الرئيسية</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#brands">الماركات</a></li>
+                    <li><a href="#why-trust">ليه تراست؟</a></li>
+                    <li><a href="#request">طلب صيانة</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="header-phone">
+                    <a href="tel:01156661812">01156661812</a>
+                    <a href="tel:01124997077">01124997077</a>
+                </div>
+                <a href="https://wa.me/201156661812" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                    <span>💬</span> واتساب
+                </a>
+                <a href="#request" class="btn btn-primary">اطلب صيانة</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="القائمة">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MOBILE NAV ===== -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#hero">الرئيسية</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#brands">الماركات</a>
+        <a href="#why-trust">ليه تراست؟</a>
+        <a href="#request">طلب صيانة</a>
+        <a href="#contact">اتصل بنا</a>
+        <div class="mobile-actions">
+            <a href="https://wa.me/201156661812" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">💬 واتساب المركز</a>
+            <a href="tel:01156661812" class="btn btn-primary btn-lg">📞 اتصال بالمركز</a>
+        </div>
+    </div>
+
+    <!-- ===== MARQUEE BAR ===== -->
+    <div class="marquee-bar" aria-hidden="true">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>مركز تراست لصيانة الأجهزة المنزلية في الإسكندرية</span>
+                <span class="dot">◆</span>
+                <span>تراست رقم واحد في مصر</span>
+                <span class="dot">◆</span>
+                <span>قبل ما تحتار... كلم تراست وخد القرار</span>
+                <span class="dot">◆</span>
+                <span class="phone">01156661812</span>
+                <span class="dot">◆</span>
+                <span class="phone">01124997077</span>
+                <span class="dot">◆</span>
+                <span>مركز تراست لصيانة الأجهزة المنزلية في الإسكندرية</span>
+                <span class="dot">◆</span>
+                <span>تراست رقم واحد في مصر</span>
+                <span class="dot">◆</span>
+                <span>قبل ما تحتار... كلم تراست وخد القرار</span>
+                <span class="dot">◆</span>
+                <span class="phone">01156661812</span>
+                <span class="dot">◆</span>
+                <span class="phone">01124997077</span>
+                <span class="dot">◆</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <div class="hero-logo-wrap">
+                    <div class="trust-logo trust-logo-lg">
+                        <span class="t1">T</span><span class="r1">R</span><span class="u1">U</span><span class="s1">S</span><span class="t2">T</span>
+                    </div>
+                </div>
+                <div class="hero-subtitle">مركز تراست</div>
+                <h1 class="hero-title">صيانة الأجهزة المنزلية</h1>
+                <div class="hero-tagline">قبل ما تحتار... كلم تراست وخد القرار</div>
+                <p class="hero-desc">
+                    تراست رقم واحد في مصر — صيانة أجهزة منزلية باحتراف في الإسكندرية.
+                    نصل إليك أينما كنت، ونشخّص العطل بدقة قبل الإصلاح.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#request" class="btn btn-primary btn-lg">🔧 اطلب صيانة الآن</a>
+                    <a href="https://wa.me/201156661812" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">💬 واتساب المركز</a>
+                </div>
+            </div>
+            <div class="hero-images">
+                <div class="hero-img-card">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80" alt="صيانة تكييف" loading="lazy" width="400" height="300">
+                    <span class="hero-img-label">تكييف</span>
+                </div>
+                <div class="hero-img-card">
+                    <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&q=80" alt="صيانة ثلاجة" loading="lazy" width="400" height="300">
+                    <span class="hero-img-label">ثلاجة</span>
+                </div>
+                <div class="hero-img-card">
+                    <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=400&q=80" alt="صيانة غسالة" loading="lazy" width="400" height="300">
+                    <span class="hero-img-label">غسالة</span>
+                </div>
+                <div class="hero-img-card">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=400&q=80" alt="صيانة بوتاجاز" loading="lazy" width="400" height="300">
+                    <span class="hero-img-label">بوتاجاز</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">خدماتنا</span>
+                <h2 class="section-title">خدمات تراست</h2>
+                <p class="section-subtitle">نقدم صيانة متكاملة لجميع الأجهزة المنزلية بأحدث المعدات وأمهر الفنيين المتخصصين.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=500&q=80" alt="صيانة الغسالات" loading="lazy" width="500" height="300">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>صيانة الغسالات</h3>
+                        <p>إصلاح جميع أنواع الغسالات الأوتوماتيك والنصف أوتوماتيك مع فحص شامل لأعطال الصرف والعصر والتسخين.</p>
+                        <a href="#request" class="btn btn-primary">اطلب صيانة</a>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=500&q=80" alt="صيانة الثلاجات" loading="lazy" width="500" height="300">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>صيانة الثلاجات</h3>
+                        <p>صيانة الثلاجات بمختلف أنواعها، إصلاح دوائر التبريد والتحكم وضبط درجات الحرارة بكفاءة عالية.</p>
+                        <a href="#request" class="btn btn-primary">اطلب صيانة</a>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500&q=80" alt="صيانة التكييفات" loading="lazy" width="500" height="300">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>صيانة التكييفات</h3>
+                        <p>صيانة وتنظيف وشحن تكييفات بجميع أنواعها، مع فحص الضواغط والدوائر الكهربائية والغاز.</p>
+                        <a href="#request" class="btn btn-primary">اطلب صيانة</a>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=500&q=80" alt="صيانة البوتاجازات" loading="lazy" width="500" height="300">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>صيانة البوتاجازات</h3>
+                        <p>إصلاح أعطال البوتاجازات، الأفران، والشوايات، مع ضبط اللهب وتنظيف الفتحات بأمان تام.</p>
+                        <a href="#request" class="btn btn-primary">اطلب صيانة</a>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500&q=80" alt="صيانة السخانات" loading="lazy" width="500" height="300">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>صيانة السخانات</h3>
+                        <p>صيانة سخانات الغاز والكهرباء، إصلاح مشاكل التسخين والتسريب وضبط أجهزة الأمان.</p>
+                        <a href="#request" class="btn btn-primary">اطلب صيانة</a>
+                    </div>
+                </div>
+                <div class="service-card animate-on-scroll">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&q=80" alt="فحص وتشخيص أعطال" loading="lazy" width="500" height="300">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>فحص وتشخيص أعطال الأجهزة المنزلية</h3>
+                        <p>خدمة الفحص الدقيق وتشخيص الأعطال لجميع الأجهزة المنزلية مع تقرير مفصل عن حالة الجهاز.</p>
+                        <a href="#request" class="btn btn-primary">اطلب صيانة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BRANDS ===== -->
+    <section class="section brands-section" id="brands">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">الماركات</span>
+                <h2 class="section-title">صيانة لمختلف ماركات الأجهزة المنزلية</h2>
+                <p class="section-subtitle">نتعامل مع جميع الماركات العالمية والمحلية المعروفة في مصر بأعلى معايير الجودة.</p>
+            </div>
+            <div class="brands-grid animate-on-scroll">
+                <div class="brand-card">Toshiba</div>
+                <div class="brand-card">Tornado</div>
+                <div class="brand-card">Fresh</div>
+                <div class="brand-card">Unionaire</div>
+                <div class="brand-card">Zanussi</div>
+                <div class="brand-card">Beko</div>
+                <div class="brand-card">LG</div>
+                <div class="brand-card">Samsung</div>
+                <div class="brand-card">Whirlpool</div>
+                <div class="brand-card">Ariston</div>
+                <div class="brand-card">Indesit</div>
+                <div class="brand-card">Sharp</div>
+                <div class="brand-card">White Point</div>
+                <div class="brand-card">Olympic Electric</div>
+                <div class="brand-card">Ideal</div>
+                <div class="brand-card">Carrier</div>
+                <div class="brand-card">Fagor</div>
+                <div class="brand-card">Bosch</div>
+                <div class="brand-card">Siemens</div>
+                <div class="brand-card">Midea</div>
+                <div class="brand-card">Haier</div>
+                <div class="brand-card">Elba</div>
+                <div class="brand-card">Kiriazi</div>
+                <div class="brand-card">Teba</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY TRUST ===== -->
+    <section class="section why-section" id="why-trust">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">ليه تراست؟</span>
+                <h2 class="section-title">ليه تختار تراست؟</h2>
+                <p class="section-subtitle">لأننا نجمع بين الخبرة والاحترافية والأمانة في التعامل مع كل عميل.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">🔧</div>
+                    <h3>فنيون متخصصون</h3>
+                    <p>فريق من الفنيين المدربين على أعلى مستوى في صيانة جميع الأجهزة المنزلية.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">🔍</div>
+                    <h3>تشخيص العطل قبل الإصلاح</h3>
+                    <p>نقوم بفحص الجهاز وتشخيص المشكلة بدقة قبل البدء في أي عملية إصلاح.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">⚙️</div>
+                    <h3>استخدام قطع غيار مناسبة</h3>
+                    <p>نستخدم قطع غيار أصلية أو بديلة عالية الجودة تناسب جهازك.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">🏠</div>
+                    <h3>خدمة صيانة منزلية</h3>
+                    <p>نصل إلى منزلك في الموعد المحدد ونقوم بالصيانة أمامك.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">📍</div>
+                    <h3>تغطية مناطق الإسكندرية</h3>
+                    <p>نغطي جميع مناطق الإسكندرية شرقًا وغربًا ووسطًا.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">📞</div>
+                    <h3>متابعة العميل من خلال مركز تراست</h3>
+                    <p>المتابعة وخدمة العميل تتم مباشرة من خلال مركز تراست لضمان راحتك.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">🛡️</div>
+                    <h3>ضمان على أعمال الصيانة</h3>
+                    <p>نضمن لك جودة العمل مع متابعة كاملة بعد إتمام الصيانة.</p>
+                </div>
+                <div class="why-card animate-on-scroll">
+                    <div class="why-icon">⏰</div>
+                    <h3>سرعة في الاستجابة</h3>
+                    <p>نرد على طلباتكم في أسرع وقت ممكن ونحدد الموعد المناسب لكم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOLLOW-UP ===== -->
+    <section class="followup-section">
+        <div class="container">
+            <div class="followup-card animate-on-scroll">
+                <div class="followup-icon">🛡️</div>
+                <div class="followup-content">
+                    <h3>متابعتك مع تراست</h3>
+                    <p>لضمان استمرار خدمتك ومتابعة أي ملاحظات أو طلبات صيانة أخرى، يرجى التواصل مع مركز تراست مباشرة عبر أرقام المركز أو واتساب.</p>
+                    <p>الفني المكلّف بالطلب مسؤول عن تنفيذ الخدمة، بينما تظل المتابعة وخدمة العميل من خلال مركز تراست.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VISIT FEE ===== -->
+    <section class="visit-fee-section">
+        <div class="container">
+            <div class="visit-fee-card animate-on-scroll">
+                <span class="visit-fee-icon">📋</span>
+                <h3>رسوم الزيارة</h3>
+                <p>الزيارة <strong>مجانية</strong> عند إجراء الصيانة.</p>
+                <p>وفي حالة عدم إجراء الصيانة، يتم تحصيل <span class="fee-highlight">150 جنيهًا</span> مقابل الزيارة والانتقال.</p>
+                <p class="fee-note">نحرص على الشفافية الكاملة مع عملائنا الكرام.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REQUEST FORM ===== -->
+    <section class="section request-section" id="request">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">طلب صيانة</span>
+                <h2 class="section-title">اطلب صيانة الآن</h2>
+                <p class="section-subtitle">املأ البيانات التالية وسيتم تجهيز طلبك وإرساله عبر واتساب إلى مركز تراست.</p>
+            </div>
+
+            <div class="request-form-wrap animate-on-scroll" id="requestFormWrap">
+                <form id="requestForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="clientName">اسم العميل <span class="required">*</span></label>
+                            <input type="text" id="clientName" name="clientName" required placeholder="مثال: أحمد محمد">
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone">رقم الموبايل <span class="required">*</span></label>
+                            <input type="tel" id="clientPhone" name="clientPhone" required placeholder="مثال: 01012345678" dir="ltr">
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone2">رقم تواصل بديل <span class="optional">(اختياري)</span></label>
+                            <input type="tel" id="clientPhone2" name="clientPhone2" placeholder="مثال: 01112345678" dir="ltr">
+                        </div>
+                        <div class="form-group">
+                            <label for="clientArea">المنطقة داخل الإسكندرية <span class="required">*</span></label>
+                            <input type="text" id="clientArea" name="clientArea" required placeholder="مثال: سيدي بشر">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="clientAddress">العنوان بالتفصيل <span class="required">*</span></label>
+                            <input type="text" id="clientAddress" name="clientAddress" required placeholder="مثال: محمد نجيب - سيدي بشر - الإسكندرية">
+                        </div>
+                        <div class="form-group">
+                            <label for="deviceType">نوع الجهاز <span class="required">*</span></label>
+                            <select id="deviceType" name="deviceType" required>
+                                <option value="" disabled selected>اختر نوع الجهاز</option>
+                                <option value="غسالة">غسالة</option>
+                                <option value="ثلاجة">ثلاجة</option>
+                                <option value="تكييف">تكييف</option>
+                                <option value="بوتاجاز">بوتاجاز</option>
+                                <option value="سخان">سخان</option>
+                                <option value="جهاز منزلي آخر">جهاز منزلي آخر</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="deviceBrand">الماركة <span class="required">*</span></label>
+                            <input type="text" id="deviceBrand" name="deviceBrand" required placeholder="مثال: توشيبا، LG، سامسونج">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="problemDesc">وصف المشكلة <span class="required">*</span></label>
+                            <textarea id="problemDesc" name="problemDesc" required placeholder="اشرح لنا المشكلة بالتفصيل..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredDate">التاريخ المطلوب <span class="required">*</span></label>
+                            <input type="date" id="preferredDate" name="preferredDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="preferredTime">الفترة المناسبة <span class="required">*</span></label>
+                            <select id="preferredTime" name="preferredTime" required>
+                                <option value="" disabled selected>اختر الفترة</option>
+                                <option value="صباحًا">صباحًا</option>
+                                <option value="ظهرًا">ظهرًا</option>
+                                <option value="مساءً">مساءً</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-submit-wrap">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">🔧 تأكيد طلب الصيانة</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Success Message -->
+            <div class="form-success" id="formSuccess">
+                <span class="success-icon">✅</span>
+                <h3>تم تجهيز طلب الصيانة</h3>
+                <p>سيتم التواصل معك من مركز تراست لتأكيد الموعد.</p>
+                <div class="success-buttons">
+                    <a href="https://wa.me/201156661812" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">💬 تواصل مع تراست عبر واتساب</a>
+                    <a href="tel:01156661812" class="btn btn-primary btn-lg">📞 اتصال بالمركز</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">معرض الصور</span>
+                <h2 class="section-title">أجهزة وخدمات تراست</h2>
+                <p class="section-subtitle">صور توضيحية للأجهزة المنزلية التي نقوم بصيانتها وخدماتنا الاحترافية.</p>
+            </div>
+            <div class="gallery-grid animate-on-scroll">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600&q=80" alt="غسالة" loading="lazy" width="600" height="600">
+                    <div class="gallery-overlay">غسالة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&q=80" alt="ثلاجة" loading="lazy" width="400" height="400">
+                    <div class="gallery-overlay">ثلاجة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80" alt="تكييف" loading="lazy" width="400" height="400">
+                    <div class="gallery-overlay">تكييف</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=400&q=80" alt="بوتاجاز" loading="lazy" width="400" height="400">
+                    <div class="gallery-overlay">بوتاجاز</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=400&q=80" alt="سخان" loading="lazy" width="400" height="400">
+                    <div class="gallery-overlay">سخان</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="فني صيانة" loading="lazy" width="600" height="600">
+                    <div class="gallery-overlay">فني صيانة</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&q=80" alt="جهاز منزلي حديث" loading="lazy" width="400" height="400">
+                    <div class="gallery-overlay">جهاز منزلي حديث</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&q=80" alt="معدات صيانة" loading="lazy" width="400" height="400">
+                    <div class="gallery-overlay">معدات صيانة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCATION ===== -->
+    <section class="section location-section" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">موقعنا</span>
+                <h2 class="section-title">تراست في الإسكندرية</h2>
+                <p class="section-subtitle">تفضل بزيارتنا أو تواصل معنا لحجز موعد الصيانة.</p>
+            </div>
+            <div class="location-grid animate-on-scroll">
+                <div class="location-info">
+                    <h3>عنوان المركز</h3>
+                    <div class="address">
+                        <span class="icon">📍</span>
+                        <span>محمد نجيب - سيدي بشر - الإسكندرية</span>
+                    </div>
+                    <div class="location-phones">
+                        <a href="tel:01156661812">
+                            <span class="phone-icon">📞</span>
+                            <span>01156661812</span>
+                        </a>
+                        <a href="tel:01124997077">
+                            <span class="phone-icon">📞</span>
+                            <span>01124997077</span>
+                        </a>
+                        <a href="https://wa.me/201156661812" target="_blank" rel="noopener">
+                            <span class="phone-icon">💬</span>
+                            <span>01156661812 (واتساب)</span>
+                        </a>
+                    </div>
+                    <a href="#request" class="btn btn-primary btn-lg">🔧 اطلب صيانة الآن</a>
+                </div>
+                <div class="map-wrap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13655.679389177356!2d29.97137955!3d31.24533335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c3e5c3e5c3e5%3A0x0!2z2LPZitiz2Kkg2KjYtNix!5e0!3m2!1sar!2seg!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع مركز تراست - سيدي بشر - الإسكندرية"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="trust-logo trust-logo-sm">
+                        <span class="t1">T</span><span class="r1">R</span><span class="u1">U</span><span class="s1">S</span><span class="t2">T</span>
+                    </div>
+                    <p><strong>مركز تراست</strong></p>
+                    <p>صيانة الأجهزة المنزلية</p>
+                    <p class="footer-tagline">قبل ما تحتار... كلم تراست وخد القرار</p>
+                    <p class="footer-tagline">تراست رقم واحد في مصر</p>
+                </div>
+                <div>
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">الرئيسية</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#brands">الماركات</a></li>
+                        <li><a href="#why-trust">ليه تراست؟</a></li>
+                        <li><a href="#request">طلب صيانة</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>خدماتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">صيانة الغسالات</a></li>
+                        <li><a href="#services">صيانة الثلاجات</a></li>
+                        <li><a href="#services">صيانة التكييفات</a></li>
+                        <li><a href="#services">صيانة البوتاجازات</a></li>
+                        <li><a href="#services">صيانة السخانات</a></li>
+                        <li><a href="#services">فحص وتشخيص الأعطال</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>تواصل معنا</h4>
+                    <div class="footer-contact-item">
+                        <span>📞</span>
+                        <a href="tel:01156661812">01156661812</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span>📞</span>
+                        <a href="tel:01124997077">01124997077</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span>💬</span>
+                        <a href="https://wa.me/201156661812" target="_blank" rel="noopener">01156661812 (واتساب)</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span>📍</span>
+                        <span>محمد نجيب - سيدي بشر - الإسكندرية</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 مركز تراست. جميع الحقوق محفوظة.</p>
+                <a href="https://wa.me/201156661812" target="_blank" rel="noopener" class="footer-whatsapp">💬 واتساب المركز</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== BOTTOM STICKY BAR (MOBILE) ===== -->
+    <div class="bottom-bar">
+        <div class="bottom-bar-inner">
+            <a href="tel:01156661812" class="bottom-bar-item">
+                <span class="bar-icon">📞</span>
+                <span>اتصال</span>
+            </a>
+            <a href="https://wa.me/201156661812" target="_blank" rel="noopener" class="bottom-bar-item bar-whatsapp">
+                <span class="bar-icon">💬</span>
+                <span>واتساب</span>
+            </a>
+            <a href="#request" class="bottom-bar-item bar-primary">
+                <span class="bar-icon">🔧</span>
+                <span>طلب صيانة</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- ===== WHATSAPP FLOAT (DESKTOP) ===== -->
+    <a href="https://wa.me/201156661812" target="_blank" rel="noopener" class="whatsapp-float" aria-label="تواصل عبر واتساب">💬</a>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img src="" alt="صورة مكبرة" id="lightboxImg">
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ===== MOBILE MENU =====
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileNav = document.getElementById('mobileNav');
+
+            if (mobileMenuBtn && mobileNav) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mobileNav.classList.toggle('open');
+                    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+                });
+
+                mobileNav.querySelectorAll('a').forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        mobileMenuBtn.classList.remove('active');
+                        mobileNav.classList.remove('open');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+
+            // ===== HEADER SCROLL =====
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }, { passive: true });
+
+            // ===== SCROLL ANIMATIONS =====
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            animateElements.forEach(function(el) {
+                observer.observe(el);
+            });
+
+            // ===== SET MIN DATE FOR DATE INPUT =====
+            const dateInput = document.getElementById('preferredDate');
+            if (dateInput) {
+                const today = new Date();
+                const yyyy = today.getFullYear();
+                const mm = String(today.getMonth() + 1).padStart(2, '0');
+                const dd = String(today.getDate()).padStart(2, '0');
+                const minDate = yyyy + '-' + mm + '-' + dd;
+                dateInput.setAttribute('min', minDate);
+
+                // Also set a default value of tomorrow
+                const tomorrow = new Date(today);
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                const tYyyy = tomorrow.getFullYear();
+                const tMm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+                const tDd = String(tomorrow.getDate()).padStart(2, '0');
+                dateInput.value = tYyyy + '-' + tMm + '-' + tDd;
+            }
+
+            // ===== REQUEST FORM SUBMISSION =====
+            const requestForm = document.getElementById('requestForm');
+            const formSuccess = document.getElementById('formSuccess');
+            const requestFormWrap = document.getElementById('requestFormWrap');
+
+            if (requestForm) {
+                requestForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+
+                    // Collect form data
+                    const formData = new FormData(requestForm);
+                    const data = {};
+                    formData.forEach(function(value, key) {
+                        data[key] = value;
+                    });
+
+                    // Validate required fields
+                    const requiredFields = ['clientName', 'clientPhone', 'clientArea', 'clientAddress', 'deviceType', 'deviceBrand', 'problemDesc', 'preferredDate', 'preferredTime'];
+                    let isValid = true;
+                    requiredFields.forEach(function(field) {
+                        if (!data[field] || data[field].trim() === '') {
+                            isValid = false;
+                            const input = document.getElementById(field);
+                            if (input) {
+                                input.style.borderColor = '#C62828';
+                                input.addEventListener('input', function() {
+                                    this.style.borderColor = '';
+                                }, { once: true });
+                            }
+                        }
+                    });
+
+                    if (!isValid) {
+                        alert('يرجى ملء جميع الحقول المطلوبة.');
+                        return;
+                    }
+
+                    // Build WhatsApp message
+                    const phone = '201156661812';
+                    let message = 'طلب صيانة جديد - مركز تراست\n\n';
+                    message += 'اسم العميل: ' + (data.clientName || '') + '\n';
+                    message += 'رقم الموبايل: ' + (data.clientPhone || '') + '\n';
+                    message += 'رقم بديل: ' + (data.clientPhone2 || 'لا يوجد') + '\n';
+                    message += 'العنوان: ' + (data.clientAddress || '') + '\n';
+                    message += 'المنطقة: ' + (data.clientArea || '') + '\n';
+                    message += 'نوع الجهاز: ' + (data.deviceType || '') + '\n';
+                    message += 'الماركة: ' + (data.deviceBrand || '') + '\n';
+                    message += 'المشكلة: ' + (data.problemDesc || '') + '\n';
+                    message += 'التاريخ المطلوب: ' + (data.preferredDate || '') + '\n';
+                    message += 'الفترة المناسبة: ' + (data.preferredTime || '') + '\n';
+
+                    // Encode message
+                    const encodedMessage = encodeURIComponent(message);
+                    const whatsappUrl = 'https://wa.me/' + phone + '?text=' + encodedMessage;
+
+                    // Open WhatsApp
+                    window.open(whatsappUrl, '_blank');
+
+                    // Show success message
+                    requestFormWrap.style.display = 'none';
+                    formSuccess.classList.add('show');
+
+                    // Scroll to success message
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                    // Reset form after a delay (optional)
+                    setTimeout(function() {
+                        requestForm.reset();
+                    }, 1000);
+                });
+            }
+
+            // ===== LIGHTBOX =====
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxClose = document.getElementById('lightboxClose');
+
+            document.querySelectorAll('.gallery-item').forEach(function(item) {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    if (img) {
+                        lightboxImg.src = img.src;
+                        lightboxImg.alt = img.alt;
+                        lightbox.classList.add('open');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            if (lightboxClose) {
+                lightboxClose.addEventListener('click', function() {
+                    lightbox.classList.remove('open');
+                    document.body.style.overflow = '';
+                });
+            }
+
+            if (lightbox) {
+                lightbox.addEventListener('click', function(e) {
+                    if (e.target === lightbox) {
+                        lightbox.classList.remove('open');
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+                    lightbox.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // ===== LAZY LOADING FALLBACK =====
+            if ('loading' in HTMLImageElement.prototype) {
+                // Native lazy loading supported
+            } else {
+                // Fallback for older browsers
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                if ('IntersectionObserver' in window) {
+                    const imageObserver = new IntersectionObserver(function(entries) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                const img = entry.target;
+                                img.src = img.dataset.src || img.src;
+                                imageObserver.unobserve(img);
+                            }
+                        });
+                    });
+                    lazyImages.forEach(function(img) {
+                        imageObserver.observe(img);
+                    });
+                }
+            }
+
+            // ===== SERVICE CARD CLICK TO REQUEST =====
+            document.querySelectorAll('.service-card .btn').forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    // Smooth scroll is handled by the anchor link
+                    // Additional behavior can be added here if needed
+                });
+            });
+
+            // ===== SET DEFAULT TIME PERIOD =====
+            const timeSelect = document.getElementById('preferredTime');
+            if (timeSelect) {
+                const hour = new Date().getHours();
+                if (hour < 12) {
+                    timeSelect.value = 'صباحًا';
+                } else if (hour < 17) {
+                    timeSelect.value = 'ظهرًا';
+                } else {
+                    timeSelect.value = 'مساءً';
+                }
+            }
+
+        })();
+    </script>
+</body>
+</html>
